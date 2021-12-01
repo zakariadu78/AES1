@@ -1,0 +1,23 @@
+vdel -lib LIB/LIB_AES -all
+vdel -lib LIB/LIB_BENCH -all
+vdel -lib LIB/LIB_RTL -all
+
+
+vlib ./LIB/LIB_AES
+vmap LIB_AES ./LIB/LIB_AES
+vlib ./LIB/LIB_RTL
+vmap LIB_AES ./LIB/LIB_RTL
+vlib ./LIB/LIB_BENCH
+vmap LIB_AES ./LIB/LIB_BENCH
+
+vcom -work LIB_AES ./SRC/PACKAGE/state_definition_package.vhd
+
+vcom -work LIB_RTL ./SRC/RTL/Counter.vhd
+vcom -work LIB_RTL ./SRC/RTL/KeyExpansion_table.vhd
+vcom -work LIB_RTL ./SRC/RTL/Sbox.vhd
+
+vcom -work LIB_BENCH ./SRC/BENCH/Counter_tb.vhd
+vcom -work LIB_BENCH ./SRC/BENCH/KeyExpansion_table_tb.vhd
+vcom -work LIB_RTL ./SRC/BENCH/Sbox_tb.vhd
+
+ 
