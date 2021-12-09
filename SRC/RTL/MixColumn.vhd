@@ -7,9 +7,11 @@ library LIB_RTL;
 
 entity MixColumn is
 port (
-data_i : in type_state;
-data_o : out type_state;
-enablemc_i : in std_logic);
+		data_i : in type_state;
+		data_o : out type_state;
+		mult3 : out type_state;
+		mult2 : out type_state;
+		enablemc_i : in std_logic);
 end MixColumn;
 
 architecture MixColumn_arch of MixColumn is
@@ -43,6 +45,7 @@ L5: for col in 0 to 3 generate
 end generate L5;
 
 data_o <= data_o_s when enablemc_i = '1' else data_i;
-
+mult3 <= mult3_s; 
+mult2 <= mult2_s;
 
 end MixColumn_arch;
