@@ -2,8 +2,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.numeric_std.all;
 
-library lib_rtl;
-use lib_rtl.state_definition_package.all;
+library lib_AES;
+use lib_AES.state_definition_package.all;
 
 entity KeyExpansion_table is
   port (round_i         : in  bit4;
