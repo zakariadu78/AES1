@@ -25,9 +25,9 @@ V_^DA3iaJRiFRkLSfTo>6_1
 !s100 1n20m17IC_3TMZ9OHH]Sl3
 Z8 OV;C;2020.1;71
 32
-Z9 !s110 1639025439
+Z9 !s110 1639481195
 !i10b 1
-Z10 !s108 1639025439.000000
+Z10 !s108 1639481195.000000
 Z11 !s90 -work|LIB_RTL|./SRC/RTL/Counter.vhd|
 Z12 !s107 ./SRC/RTL/Counter.vhd|
 !i113 1
@@ -99,61 +99,16 @@ R19
 !i113 1
 R13
 R14
-Emixcolumn
-Z20 w1639025297
-R2
-R3
-R4
-R5
-!i122 5
-R0
-Z21 8./SRC/RTL/MixColumn.vhd
-Z22 F./SRC/RTL/MixColumn.vhd
-l0
-L8 1
-VmLA6;c3Dok__JP]dS7@VU3
-!s100 [b3`WY3cQ;cg^:knM43442
-R8
-32
-R9
-!i10b 1
-R10
-Z23 !s90 -work|LIB_RTL|./SRC/RTL/MixColumn.vhd|
-!s107 ./SRC/RTL/MixColumn.vhd|
-!i113 1
-R13
-R14
-Amixcolumn_arch
-R2
-R3
-R4
-R5
-DEx4 work 9 mixcolumn 0 22 mLA6;c3Dok__JP]dS7@VU3
-!i122 5
-l22
-L17 35
-VPG4PK;6[2MNzEhoFnPNF:2
-!s100 <iOATO?P7ObGQJCZ2K=>R3
-R8
-32
-R9
-!i10b 1
-R10
-R23
-Z24 !s107 ./SRC/RTL/MixColumn.vhd|
-!i113 1
-R13
-R14
 Esbox_inv
-Z25 w1638354155
+Z20 w1638354155
 R2
 R3
 R4
 R5
 !i122 2
 R0
-Z26 8./SRC/RTL/Sbox.vhd
-Z27 F./SRC/RTL/Sbox.vhd
+Z21 8./SRC/RTL/Sbox.vhd
+Z22 F./SRC/RTL/Sbox.vhd
 l0
 L8 1
 V8hLg1;1k>W?JOad@@DS5c0
@@ -163,8 +118,8 @@ R8
 R9
 !i10b 1
 R10
-Z28 !s90 -work|LIB_RTL|./SRC/RTL/Sbox.vhd|
-Z29 !s107 ./SRC/RTL/Sbox.vhd|
+Z23 !s90 -work|LIB_RTL|./SRC/RTL/Sbox.vhd|
+Z24 !s107 ./SRC/RTL/Sbox.vhd|
 !i113 1
 R13
 R14
@@ -173,7 +128,7 @@ R2
 R3
 R4
 R5
-Z30 DEx4 work 8 sbox_inv 0 22 8hLg1;1k>W?JOad@@DS5c0
+DEx4 work 8 sbox_inv 0 22 8hLg1;1k>W?JOad@@DS5c0
 !i122 2
 l17
 L16 274
@@ -184,127 +139,53 @@ R8
 R9
 !i10b 1
 R10
-R28
-R29
+R23
+R24
 !i113 1
 R13
 R14
-Eshiftrows
-Z31 w1638435674
-R2
-R3
-R4
-R5
-!i122 4
-R0
-Z32 8./SRC/RTL/ShiftRow.vhd
-Z33 F./SRC/RTL/ShiftRow.vhd
-l0
-L9 1
-VIVB<<PF;a`GKP8iWbU`G<3
-!s100 z5U>n<dha`K?L;Z[CIdjN3
-R8
-32
-R9
-!i10b 1
-R10
-Z34 !s90 -work|LIB_RTL|./SRC/RTL/ShiftRow.vhd|
-Z35 !s107 ./SRC/RTL/ShiftRow.vhd|
-!i113 1
-R13
-R14
-Ashiftrows_arch
-R2
-R3
-R4
-R5
-DEx4 work 9 shiftrows 0 22 IVB<<PF;a`GKP8iWbU`G<3
-!i122 4
-l19
-L17 25
-VX9gKY2WIT:8HKhC@5OUbe3
-!s100 1zii9lDY^6I6kcN>`>T]d3
-R8
-32
-R9
-!i10b 1
-R10
-R34
-R35
-!i113 1
-R13
-R14
-Esubbytes
-Z36 w1638354597
+Esbox_inv_tb
+Z25 w1638385039
 R2
 R3
 R4
 R5
 !i122 3
 R0
-Z37 8./SRC/RTL/SubBytes.vhd
-Z38 F./SRC/RTL/SubBytes.vhd
+Z26 8./SRC/BENCH/Sbox_tb.vhd
+Z27 F./SRC/BENCH/Sbox_tb.vhd
 l0
 L10 1
-VVBYRfYA_d0l2P[LRXBFQB3
-!s100 _]0cXaa4XAVeUPI5A?hSP2
+Vnb`9HY6mRVd57WD24GD8M0
+!s100 YGz5^6`;ezFGH?a[:egSf0
 R8
 32
 R9
 !i10b 1
 R10
-Z39 !s90 -work|LIB_RTL|./SRC/RTL/SubBytes.vhd|
-Z40 !s107 ./SRC/RTL/SubBytes.vhd|
+Z28 !s90 -work|LIB_RTL|./SRC/BENCH/Sbox_tb.vhd|
+!s107 ./SRC/BENCH/Sbox_tb.vhd|
 !i113 1
 R13
 R14
-Asubbytes_arch
+Asbox_inv_tb_arch
 R2
 R3
 R4
 R5
-Z41 DEx4 work 8 subbytes 0 22 VBYRfYA_d0l2P[LRXBFQB3
+DEx4 work 11 sbox_inv_tb 0 22 nb`9HY6mRVd57WD24GD8M0
 !i122 3
-l27
-L17 22
-VRK_GWEEJLOfHLJPm:=M1j3
-!s100 jRhj1?9k4;YDX_FRVcVUM1
+l25
+L14 335
+VkV:8POl_N5`:jZdF@L5RK0
+!s100 JdPO9TL5=5zLP_RN<M@CT3
 R8
 32
 R9
 !i10b 1
 R10
-R39
-R40
-!i113 1
-R13
-R14
-Csubbytes_conf
-eSubBytes
-aSubBytes_arch
-R30
-DAx4 work 8 subbytes 13 subbytes_arch 22 RK_GWEEJLOfHLJPm:=M1j3
-R2
-R3
-R4
-R5
-R41
-!i122 3
-R36
-R0
-R37
-R38
-l0
-L40 1
-V6JE<1aVj<oDeWAkhR;gA;2
-!s100 PKcgBfzJ@d0UJG0nURKfj0
-R8
-32
-R9
-!i10b 1
-R10
-R39
-R40
+R28
+Z29 !s107 ./SRC/BENCH/Sbox_tb.vhd|
 !i113 1
 R13
 R14
