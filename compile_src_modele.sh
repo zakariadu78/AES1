@@ -28,6 +28,12 @@ echo "compile vhdl sources"
 /home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/SubBytes.vhd
 /home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/ShiftRow.vhd
 /home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/MixColumn.vhd
+/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/addRoundKey.vhd
+/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/AES.vhd
+/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/AES_Round.vhd
+/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/AES_FSM.vhd
+/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/MUX.vhd
+
 
 
 echo "compile vhdl test bench"
@@ -44,6 +50,5 @@ echo "compilation finished"
 echo "start simulation..."
 # ATTENTION un seul VSIM decommenté à la fois!
 #/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vsim .
-
 
 

@@ -3,7 +3,6 @@ use IEEE.STD_LOGIC_1164.all;
 use IEEE.numeric_std.all;
 library LIB_AES;
 use lib_aes.state_definition_package.all;
-library LIB_RTL;
 
 entity MixColumn is
 port (
