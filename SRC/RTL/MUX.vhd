@@ -7,10 +7,10 @@ use lib_aes.state_definition_package.all;
 
 entity MUX is 
 port (
-  I0 : in bit128; 
-  I1 : in bit128; 
+  I0 : in type_state; 
+  I1 : in type_state; 
   S  : in std_logic; 
-  O : out bit128); 
+  O : out type_state); 
 end entity MUX; 
 
 architecture MUX_arch of MUX is 

@@ -60,12 +60,21 @@ architecture AES_arch of AES is
         ); 
     end component AES_Round; 
 
+    component MUX is 
+port (
+  I0 : in type_state; 
+  I1 : in type_state; 
+  S  : in std_logic; 
+  O : out type_state); 
+end component MUX; 
+
 signal Counter_s : bit4; 
 signal done_s,enableCounter_s,enableMixColumn_s,enableOutput_s,
 enableRoundComputing_s,getciphertext_s,resetCounter_s : std_logic; 
 signal ExpansionKey_s : bit128; 
 signal data_o_s : type_state;
 signal currentText_s : type_state; 
+signal state_s : type_state; 
 
 begin
 
@@ -108,4 +117,22 @@ begin
             Reset_i => reset_i,
             data_o => data_o_s
         );
+
+    MULTIPLEXEUR : MUX 
+        port map (
+            I0 => data_i,
+            I1 => data_o_s,
+            S => getciphertext_s,
+            O => currentText_s
+        );
+
+    seq_0 : process (clock_i, reset_i) is
+    begin -- process seq_0
+    if reset_i = '0' then -- asynchronous reset (active-low)
+        state_s <= ((others => (others => (others => '0'))));
+    -- or use 2 x for ... generate
+    elsif clock_i'event and clock_i = '1' and enableOutput_s = '1' then -- rising clock
+        state_s <= data_o_s;
+    end if;
+    end process seq_0;
 end AES_arch; 
