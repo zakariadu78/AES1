@@ -1,7 +1,24 @@
 # vsim . 
-# Start time: 14:05:29 on Dec 17,2021
+# Start time: 21:26:46 on Dec 21,2021
 # ** Error (suppressible): (vsim-19) Failed to access library '' at "".
-# Invalid argument. (errno = EINVAL)
+# No such file or directory. (errno = ENOENT)
 # Error loading design
-# End time: 14:05:30 on Dec 17,2021, Elapsed time: 0:00:01
+# End time: 21:26:46 on Dec 21,2021, Elapsed time: 0:00:00
 # Errors: 1, Warnings: 0
+vsim LIB_BENCH.shiftrows_tb
+# vsim LIB_BENCH.shiftrows_tb 
+# Start time: 21:26:52 on Dec 21,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_aes.state_definition_package(body)
+# Loading LIB_BENCH.shiftrows_tb(shiftrows_tb_arch)
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+add wave -position end  sim:/shiftrows_tb/data_i_s
+add wave -position end  sim:/shiftrows_tb/data_o_s
+run 50 ns 
+radix h 
+# hexadecimal
+# End time: 21:27:17 on Dec 21,2021, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 0

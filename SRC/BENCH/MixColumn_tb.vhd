@@ -45,10 +45,3 @@ begin
 
 end architecture MixColumn_tb_arch;
 
-configuration MixColumn_tb_conf of MixColumn_tb is 
-  for MixColumn_tb_arch 
-    for DUT : MixColumn
-      use entity LIB_RTL.MixColumn(MixColumn_arch); 
-    end for; 
-  end for; 
-end MixColumn_tb_conf; 

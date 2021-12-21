@@ -37,10 +37,10 @@ L3: for row in 0 to 3 generate
 end generate L3;
 
 L5: for col in 0 to 3 generate
-	data_o(0)(col) <= mult2_s(0)(col) xor mult3_s(1)(col) xor data_i(2)(col) xor data_i(3)(col) ;
-	data_o(1)(col) <= data_i(0)(col) xor mult2_s(1)(col) xor mult3_s(2)(col)  xor data_i(3)(col) ;
-	data_o(2)(col) <= data_i(0)(col) xor data_i(1)(col) xor mult2_s(2)(col) xor mult3_s(3)(col) ;
-	data_o(3)(col) <= mult3_s(0)(col) xor data_i(1)(col) xor data_i(2)(col) xor mult2_s(3)(col) ;
+	data_o_s(0)(col) <= mult2_s(0)(col) xor mult3_s(1)(col) xor data_i(2)(col) xor data_i(3)(col) ;
+	data_o_s(1)(col) <= data_i(0)(col) xor mult2_s(1)(col) xor mult3_s(2)(col)  xor data_i(3)(col) ;
+	data_o_s(2)(col) <= data_i(0)(col) xor data_i(1)(col) xor mult2_s(2)(col) xor mult3_s(3)(col) ;
+	data_o_s(3)(col) <= mult3_s(0)(col) xor data_i(1)(col) xor data_i(2)(col) xor mult2_s(3)(col) ;
 end generate L5;
 
 data_o <= data_o_s when enablemc_i = '1' else data_i;
