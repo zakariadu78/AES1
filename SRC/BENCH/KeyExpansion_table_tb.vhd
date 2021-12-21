@@ -12,10 +12,10 @@ end entity KeyExpansion_table_tb;
 architecture KeyExpansion_table_tb_arch of KeyExpansion_table_tb is
   component KeyExpansion_table
     port (round_i         : in  bit4;
-          expansion_key_o : out bit128);
+          expansion_key_o : out type_key);
   end component;
   signal round_s         : bit4;
-  signal expansion_key_s : bit128;
+  signal expansion_key_s : type_key;
 begin
   DUT : KeyExpansion_table
     port map (

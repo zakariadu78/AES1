@@ -44,14 +44,14 @@ architecture AES_arch of AES is
     component KeyExpansion_table is
     port (
         round_i         : in  bit4;
-        expansion_key_o : out bit128
+        expansion_key_o : out type_key
     );
     end component KeyExpansion_table;
 
     component AES_Round is 
     port ( 
         clock_i : in std_logic; 
-        currentKey_i : in bit128; 
+        currentKey_i : in type_key; 
         currentText_i : in type_state; 
         enableInvMixColumns_i : in std_logic; 
         enableRoundComputing_i : in std_logic; 
@@ -67,11 +67,10 @@ port (
   S  : in std_logic; 
   O : out type_state); 
 end component MUX; 
-
 signal Counter_s : bit4; 
 signal done_s,enableCounter_s,enableMixColumn_s,enableOutput_s,
 enableRoundComputing_s,getciphertext_s,resetCounter_s : std_logic; 
-signal ExpansionKey_s : bit128; 
+signal ExpansionKey_s : type_key; 
 signal data_o_s : type_state;
 signal currentText_s : type_state; 
 signal state_s : type_state; 

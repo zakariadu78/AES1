@@ -25,9 +25,9 @@ VC<8U7ahFgOlE3JU<<g>aL2
 !s100 z75;54f^J<gV:j5C;jBC50
 Z8 OV;C;2020.1;71
 32
-Z9 !s110 1640118403
+Z9 !s110 1640123748
 !i10b 1
-Z10 !s108 1640118403.000000
+Z10 !s108 1640123748.000000
 Z11 !s90 -work|LIB_BENCH|./SRC/BENCH/addRoundKey_tb.vhd|
 Z12 !s107 ./SRC/BENCH/addRoundKey_tb.vhd|
 !i113 1
@@ -54,6 +54,96 @@ R12
 !i113 1
 R13
 R14
+Eaes_round_tb
+Z15 w1640123485
+R2
+R3
+R4
+R5
+!i122 8
+R0
+Z16 8./SRC/BENCH/AES_Round_tb.vhd
+Z17 F./SRC/BENCH/AES_Round_tb.vhd
+l0
+L7 1
+VT?J]OlIAZNiG@83gAImX43
+!s100 Y7e72ZD>;A^>0=kLi1kOm2
+R8
+32
+Z18 !s110 1640123749
+!i10b 1
+Z19 !s108 1640123749.000000
+Z20 !s90 -work|LIB_BENCH|./SRC/BENCH/AES_Round_tb.vhd|
+!s107 ./SRC/BENCH/AES_Round_tb.vhd|
+!i113 1
+R13
+R14
+Aaes_round_tb_arch
+R2
+R3
+R4
+R5
+DEx4 work 12 aes_round_tb 0 22 T?J]OlIAZNiG@83gAImX43
+!i122 8
+l32
+L11 49
+VKTai93<GeOGa]]`zYTKQH0
+!s100 i;4E6KeZ:m7jMOX3N2B>Y1
+R8
+32
+R18
+!i10b 1
+R19
+R20
+Z21 !s107 ./SRC/BENCH/AES_Round_tb.vhd|
+!i113 1
+R13
+R14
+Eaes_tb
+Z22 w1640121687
+R2
+R3
+R4
+R5
+!i122 7
+R0
+Z23 8./SRC/BENCH/AES_tb.vhd
+Z24 F./SRC/BENCH/AES_tb.vhd
+l0
+L9 1
+VzIoVN[Ec;mAi^IPIkBoDN1
+!s100 ?E]6f;S^e9X`^CNNj2fK@2
+R8
+32
+R18
+!i10b 1
+R19
+Z25 !s90 -work|LIB_BENCH|./SRC/BENCH/AES_tb.vhd|
+Z26 !s107 ./SRC/BENCH/AES_tb.vhd|
+!i113 1
+R13
+R14
+Aaes_tb_arch
+R2
+R3
+R4
+R5
+DEx4 work 6 aes_tb 0 22 zIoVN[Ec;mAi^IPIkBoDN1
+!i122 7
+l29
+L12 39
+VMN5g4XUV>Db4N@18n<;cg3
+!s100 l0gmEIeG5[WVIX3Ia^6Im3
+R8
+32
+R18
+!i10b 1
+R19
+R25
+R26
+!i113 1
+R13
+R14
 Ecounter_tb
 R1
 R2
@@ -62,19 +152,19 @@ R4
 R5
 !i122 0
 R0
-Z15 8./SRC/BENCH/Counter_tb.vhd
-Z16 F./SRC/BENCH/Counter_tb.vhd
+Z27 8./SRC/BENCH/Counter_tb.vhd
+Z28 F./SRC/BENCH/Counter_tb.vhd
 l0
-Z17 L10 1
+Z29 L10 1
 VSUkiAikFkI4iMI99Dil5:0
 !s100 ?Z?AVTzoo=e8nOiXSSggW0
 R8
 32
-Z18 !s110 1640118402
+R9
 !i10b 1
-Z19 !s108 1640118402.000000
-Z20 !s90 -work|LIB_BENCH|./SRC/BENCH/Counter_tb.vhd|
-Z21 !s107 ./SRC/BENCH/Counter_tb.vhd|
+R10
+Z30 !s90 -work|LIB_BENCH|./SRC/BENCH/Counter_tb.vhd|
+Z31 !s107 ./SRC/BENCH/Counter_tb.vhd|
 !i113 1
 R13
 R14
@@ -91,35 +181,35 @@ VaO204Fa;4`SA^6M91c[je3
 !s100 >hgT^JNc2VP;@n;gRY2:S0
 R8
 32
-R18
+R9
 !i10b 1
-R19
-R20
-R21
+R10
+R30
+R31
 !i113 1
 R13
 R14
 Ekeyexpansion_table_tb
-R1
+Z32 w1640120346
 R2
 R3
 R4
 R5
 !i122 6
 R0
-Z22 8./SRC/BENCH/KeyExpansion_table_tb.vhd
-Z23 F./SRC/BENCH/KeyExpansion_table_tb.vhd
+Z33 8./SRC/BENCH/KeyExpansion_table_tb.vhd
+Z34 F./SRC/BENCH/KeyExpansion_table_tb.vhd
 l0
 L9 1
 V49UOl7_LWTbSUV7HnA1d42
 !s100 od8aizSD[dhHTKD1ML^lH3
 R8
 32
-R9
+R18
 !i10b 1
 R10
-Z24 !s90 -work|LIB_BENCH|./SRC/BENCH/KeyExpansion_table_tb.vhd|
-!s107 ./SRC/BENCH/KeyExpansion_table_tb.vhd|
+Z35 !s90 -work|LIB_BENCH|./SRC/BENCH/KeyExpansion_table_tb.vhd|
+Z36 !s107 ./SRC/BENCH/KeyExpansion_table_tb.vhd|
 !i113 1
 R13
 R14
@@ -132,28 +222,28 @@ DEx4 work 21 keyexpansion_table_tb 0 22 49UOl7_LWTbSUV7HnA1d42
 !i122 6
 l19
 L12 23
-V05XSFQS2>_lUD[@bLF7cD1
-!s100 iUZz>bHClAF4]VeZ[^lI[2
+VZWP`:33]zBCaW4VWJC1gT3
+!s100 QAn4Ed>7?[S4QjQ=lfW^N1
 R8
 32
-R9
+R18
 !i10b 1
 R10
-R24
-Z25 !s107 ./SRC/BENCH/KeyExpansion_table_tb.vhd|
+R35
+R36
 !i113 1
 R13
 R14
 Emixcolumn_tb
-Z26 w1640117915
+Z37 w1640117915
 R2
 R3
 R4
 R5
 !i122 5
 R0
-Z27 8./SRC/BENCH/MixColumn_tb.vhd
-Z28 F./SRC/BENCH/MixColumn_tb.vhd
+Z38 8./SRC/BENCH/MixColumn_tb.vhd
+Z39 F./SRC/BENCH/MixColumn_tb.vhd
 l0
 L9 1
 VKBHMTdeH2?I4<gV4a0nIh0
@@ -163,8 +253,8 @@ R8
 R9
 !i10b 1
 R10
-Z29 !s90 -work|LIB_BENCH|./SRC/BENCH/MixColumn_tb.vhd|
-Z30 !s107 ./SRC/BENCH/MixColumn_tb.vhd|
+Z40 !s90 -work|LIB_BENCH|./SRC/BENCH/MixColumn_tb.vhd|
+Z41 !s107 ./SRC/BENCH/MixColumn_tb.vhd|
 !i113 1
 R13
 R14
@@ -184,8 +274,8 @@ R8
 R9
 !i10b 1
 R10
-R29
-R30
+R40
+R41
 !i113 1
 R13
 R14
@@ -197,19 +287,19 @@ R4
 R5
 !i122 1
 R0
-Z31 8./SRC/BENCH/Sbox_tb.vhd
-Z32 F./SRC/BENCH/Sbox_tb.vhd
+Z42 8./SRC/BENCH/Sbox_tb.vhd
+Z43 F./SRC/BENCH/Sbox_tb.vhd
 l0
-R17
+R29
 V4Uh0V^=;7bamGWkc355493
 !s100 YGz5^6`;ezFGH?a[:egSf0
 R8
 32
-R18
+R9
 !i10b 1
-R19
-Z33 !s90 -work|LIB_BENCH|./SRC/BENCH/Sbox_tb.vhd|
-Z34 !s107 ./SRC/BENCH/Sbox_tb.vhd|
+R10
+Z44 !s90 -work|LIB_BENCH|./SRC/BENCH/Sbox_tb.vhd|
+Z45 !s107 ./SRC/BENCH/Sbox_tb.vhd|
 !i113 1
 R13
 R14
@@ -226,11 +316,11 @@ VVBYchh>J1XFPW_R<0RVch2
 !s100 JdPO9TL5=5zLP_RN<M@CT3
 R8
 32
-R18
+R9
 !i10b 1
-R19
-R33
-R34
+R10
+R44
+R45
 !i113 1
 R13
 R14
@@ -242,8 +332,8 @@ R4
 R5
 !i122 3
 R0
-Z35 8./SRC/BENCH/ShiftRows_tb.vhd
-Z36 F./SRC/BENCH/ShiftRows_tb.vhd
+Z46 8./SRC/BENCH/ShiftRows_tb.vhd
+Z47 F./SRC/BENCH/ShiftRows_tb.vhd
 l0
 L9 1
 VgIcTOiN0?AE_E?FO]hSP31
@@ -253,8 +343,8 @@ R8
 R9
 !i10b 1
 R10
-Z37 !s90 -work|LIB_BENCH|./SRC/BENCH/ShiftRows_tb.vhd|
-Z38 !s107 ./SRC/BENCH/ShiftRows_tb.vhd|
+Z48 !s90 -work|LIB_BENCH|./SRC/BENCH/ShiftRows_tb.vhd|
+Z49 !s107 ./SRC/BENCH/ShiftRows_tb.vhd|
 !i113 1
 R13
 R14
@@ -274,8 +364,8 @@ R8
 R9
 !i10b 1
 R10
-R37
-R38
+R48
+R49
 !i113 1
 R13
 R14
@@ -287,19 +377,19 @@ R4
 R5
 !i122 2
 R0
-Z39 8./SRC/BENCH/SubBytes_tb.vhd
-Z40 F./SRC/BENCH/SubBytes_tb.vhd
+Z50 8./SRC/BENCH/SubBytes_tb.vhd
+Z51 F./SRC/BENCH/SubBytes_tb.vhd
 l0
 L9 1
 V9h6Q?`0[0[LI_ioFF9kA00
 !s100 STBz<zbRaRXKg31kbdY=40
 R8
 32
-R18
+R9
 !i10b 1
-R19
-Z41 !s90 -work|LIB_BENCH|./SRC/BENCH/SubBytes_tb.vhd|
-Z42 !s107 ./SRC/BENCH/SubBytes_tb.vhd|
+R10
+Z52 !s90 -work|LIB_BENCH|./SRC/BENCH/SubBytes_tb.vhd|
+Z53 !s107 ./SRC/BENCH/SubBytes_tb.vhd|
 !i113 1
 R13
 R14
@@ -308,7 +398,7 @@ R2
 R3
 R4
 R5
-Z43 DEx4 work 11 subbytes_tb 0 22 9h6Q?`0[0[LI_ioFF9kA00
+Z54 DEx4 work 11 subbytes_tb 0 22 9h6Q?`0[0[LI_ioFF9kA00
 !i122 2
 l25
 L13 28
@@ -316,11 +406,11 @@ VkCD<;Mn=H^zzjmo`99Egc1
 !s100 OBN64Uo>XY:;zoP@7E8b21
 R8
 32
-R18
+R9
 !i10b 1
-R19
-R41
-R42
+R10
+R52
+R53
 !i113 1
 R13
 R14
@@ -333,23 +423,23 @@ R2
 R3
 R4
 R5
-R43
+R54
 !i122 2
 R1
 R0
-R39
-R40
+R50
+R51
 l0
 L42 1
 VFNSR49dGIlm9h7;nLbM1J0
 !s100 4dbl_MTGlBdBo5d57R5^>2
 R8
 32
-R18
+R9
 !i10b 1
-R19
-R41
-R42
+R10
+R52
+R53
 !i113 1
 R13
 R14

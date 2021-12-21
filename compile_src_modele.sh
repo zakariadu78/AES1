@@ -44,12 +44,15 @@ echo "compile vhdl test bench"
 /home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/addRoundKey_tb.vhd
 /home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/MixColumn_tb.vhd
 /home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/KeyExpansion_table_tb.vhd
+/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/AES_tb.vhd
+/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/AES_Round_tb.vhd
+
 
 
 echo "compilation finished"
 
 echo "start simulation..."
 # ATTENTION un seul VSIM decommenté à la fois!
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vsim .
+# /home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vsim .
 
 
