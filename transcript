@@ -28,3 +28,6 @@ vsim LIB_RTL.aes(aes_arch)
 run -all
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /aes/KEY
+# Break key hit
+# End time: 23:00:08 on Dec 21,2021, Elapsed time: 0:03:14
+# Errors: 0, Warnings: 1
