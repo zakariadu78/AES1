@@ -20,6 +20,7 @@ C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work LIB_RTL ./SRC/RTL/addRoundK
 C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work LIB_RTL ./SRC/RTL/AES.vhd
 C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work LIB_RTL ./SRC/RTL/AES_Round.vhd
 C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work LIB_RTL ./SRC/RTL/AES_FSM.vhd
+C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work LIB_RTL ./SRC/RTL/KeyExpansion_table.vhd
 C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work LIB_RTL ./SRC/RTL/MUX.vhd
 
 C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work LIB_BENCH ./SRC/BENCH/Counter_tb.vhd
