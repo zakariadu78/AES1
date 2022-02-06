@@ -18,7 +18,7 @@ package state_definition_package is
 
   type row_state is array(0 to 3) of bit8;
   type column_state is array(0 to 3) of bit8;
-  type type_state is array(0 to 3) of row_state;
+  type type_state is array(0 to 3) of column_state;
   type type_shift is array(0 to 3) of integer range 0 to 3;
   type type_temp is array(0 to 3) of bit8;
   type row_key is array(0 to 3) of bit8;

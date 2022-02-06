@@ -15,20 +15,20 @@ architecture MixColumn_tb_arch of MixColumn_tb is
     port (
     data_i : in type_state;
 		data_o : out type_state;
-		mult2 : out row_state;
-		mult3 : out row_state;
-		mult4 : out row_state;
-		mult8 : out row_state;
-		mult9 : out row_state;
-		multb : out row_state;
-		multd : out row_state;
-		multe : out row_state;
+		mult2 : out column_state;
+		mult3 : out column_state;
+		mult4 : out column_state;
+		mult8 : out column_state;
+		mult9 : out column_state;
+		multb : out column_state;
+		multd : out column_state;
+		multe : out column_state;
 		enablemc_i : in std_logic);
     end component;
 
     signal enablemc_i_s :  std_logic; 
     signal data_i_s, data_o_s : type_state; 
-    signal mult2_s,mult3_s, mult4_s, mult8_s, mult9_s, multb_s, multd_s, multe_s : row_state; 
+    signal mult2_s,mult3_s, mult4_s, mult8_s, mult9_s, multb_s, multd_s, multe_s : column_state; 
 
 begin 
     DUT : MixColumn
@@ -51,10 +51,10 @@ begin
 
 
       data_i_s <= ( 
-      ( X"01", X"AD", X"D2", X"B0"),
-			( X"02", X"7F", X"15", X"40"),
-			( X"03", X"68", X"E6", X"15"),
-			( X"04", X"28", X"8B", X"EF") ); 
+      ( X"12", X"FD", X"89", X"2C"),
+			( X"90", X"BB", X"E2", X"FD"),
+			( X"56", X"A1", X"BF", X"8A"),
+			( X"F9", X"01", X"93", X"1C") ); 
 
 
 end architecture MixColumn_tb_arch;
