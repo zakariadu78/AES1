@@ -1,40 +1,32 @@
-vsim LIB_BENCH.mixcolumn_tb
-# vsim LIB_BENCH.mixcolumn_tb 
-# Start time: 19:33:06 on Feb 06,2022
+vsim lib_bench.mixcolumn_tb_conf
+# vsim lib_bench.mixcolumn_tb_conf 
+# Start time: 20:15:43 on Feb 08,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading LIB_BENCH.state_definition_package(body)
-# Loading LIB_BENCH.mixcolumn_tb(mixcolumn_tb_arch)
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.mixcolumn_tb_conf
+# Loading lib_bench.mixcolumn_tb(mixcolumn_tb_arch)
 # Loading lib_rtl.mixcolumn(mixcolumn_arch)
-add wave -position insertpoint  \
-sim:/mixcolumn_tb/enablemc_i_s \
-sim:/mixcolumn_tb/data_i_s \
-sim:/mixcolumn_tb/data_o_s \
-sim:/mixcolumn_tb/mult2_s \
-sim:/mixcolumn_tb/mult3_s \
-sim:/mixcolumn_tb/mult4_s \
-sim:/mixcolumn_tb/mult8_s \
-sim:/mixcolumn_tb/mult9_s \
-sim:/mixcolumn_tb/multb_s \
-sim:/mixcolumn_tb/multd_s \
-sim:/mixcolumn_tb/multe_s
-add wave -position insertpoint  \
-sim:/mixcolumn_tb/enablemc_i_s \
-sim:/mixcolumn_tb/data_i_s \
-sim:/mixcolumn_tb/data_o_s \
-sim:/mixcolumn_tb/mult2_s \
-sim:/mixcolumn_tb/mult3_s \
-sim:/mixcolumn_tb/mult4_s \
-sim:/mixcolumn_tb/mult8_s \
-sim:/mixcolumn_tb/mult9_s \
-sim:/mixcolumn_tb/multb_s \
-sim:/mixcolumn_tb/multd_s \
-sim:/mixcolumn_tb/multe_s
-# can't read "vsimPriv(.main_pane.wave.interior.cs.body.pw.wf:current_tree)": no such element in array
 radix h 
 # hexadecimal
-run 300 ns
-# End time: 19:34:22 on Feb 06,2022, Elapsed time: 0:01:16
+run 200ns
+vsim lib_bench.aes_round_tb
+# End time: 20:51:40 on Feb 08,2022, Elapsed time: 0:35:57
 # Errors: 0, Warnings: 0
+# vsim lib_bench.aes_round_tb 
+# Start time: 20:51:40 on Feb 08,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
+# Loading lib_rtl.aes_round(aes_round_arch)
+# ** Fatal: (vsim-3817) Port "firstRound_i" of entity "aes_round" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /aes_round_tb/DUT File: ./SRC/RTL/AES_Round.vhd Line: 14
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 20:51:40 on Feb 08,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

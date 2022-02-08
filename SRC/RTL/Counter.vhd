@@ -1,7 +1,7 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.all;
-use IEEE.numeric_STD.all;
-
+library IEEE; 
+use IEEE.std_logic_1164.all; 
+use IEEE.numeric_std.all;
+library lib_rtl;
 library lib_aes;
 use lib_aes.state_definition_package.all;
 

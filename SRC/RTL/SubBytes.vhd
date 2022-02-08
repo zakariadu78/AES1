@@ -1,10 +1,9 @@
 library IEEE; 
 use IEEE.std_logic_1164.all; 
 use IEEE.numeric_std.all;
-
-library lib_AES;
-library lib_rtl; 
-use lib_AES.state_definition_package.all;
+library lib_rtl;
+library lib_aes;
+use lib_aes.state_definition_package.all;
 
 
 entity SubBytes is 
@@ -23,12 +22,15 @@ component Sbox_inv
     );
 end component;
 
+signal temp : bit8;
 
 begin 
 
+temp <=  data_i(0)(0); 
+
 loopi : for i in 0 to 3 generate 
     loopj : for j in 0 to 3 generate 
-        Sbox_in : Sbox_inv port map (
+        SBOX : Sbox_inv port map (
           data_i => data_i(i)(j),
           data_o => data_o(i)(j)
         ); 
