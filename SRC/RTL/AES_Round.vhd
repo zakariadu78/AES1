@@ -47,14 +47,6 @@ ARCHITECTURE AES_Round_arch OF AES_Round IS
     PORT (
       data_i : IN type_state;
       data_o : OUT type_state;
-      mult2 : OUT column_state;
-      mult3 : OUT column_state;
-      mult4 : OUT column_state;
-      mult8 : OUT column_state;
-      mult9 : OUT column_state;
-      multb : OUT column_state;
-      multd : OUT column_state;
-      multe : OUT column_state;
       enablemc_i : IN STD_LOGIC);
   END COMPONENT;
 
@@ -78,7 +70,7 @@ BEGIN
     data_o => signal_inter_SubBytes_AddRoundKey);
 
   inter_SubBytes_AddRoundKey <= signal_inter_SubBytes_AddRoundKey;
-  signal_inter_SubBytes_AddRoundKey_temp <= signal_inter_SubBytes_AddRoundKey WHEN firstRound_i = '1' ELSE
+  signal_inter_SubBytes_AddRoundKey_temp <= signal_inter_SubBytes_AddRoundKey WHEN firstRound_i = '0' ELSE
     currentText_i;
   ADD : AddRoundKey PORT MAP(
     Data_i => signal_inter_SubBytes_AddRoundKey_temp,
@@ -102,4 +94,24 @@ BEGIN
     END IF;
   END PROCESS seq;
 
+  
 END AES_Round_arch;
+
+
+configuration AES_Round_conf of AES_Round is 
+  for AES_Round_arch 
+    for all:AddRoundKey
+      use entity lib_rtl.AddRoundKey(AddRoundKey_arch);
+    end for; 
+    for all:ShiftRows
+      use entity lib_rtl.ShiftRows(ShiftRows_arch);
+    end for; 
+    for all:SubBytes
+      use configuration lib_rtl.SubBytes_conf; 
+    end for; 
+    for all:MixColumn
+      use entity lib_rtl.MixColumn(MixColumn_arch);
+    end for; 
+  end for;
+end AES_Round_conf; 
+

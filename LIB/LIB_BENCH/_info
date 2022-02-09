@@ -15,7 +15,7 @@ Z1 DPx7 lib_aes 24 state_definition_package 0 22 @@L0C?4=lmc7WV5Afo>^62
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 423
+!i122 666
 Z5 dC:/Users/zakaria/Downloads/AES
 Z6 8./SRC/BENCH/addRoundKey_tb.vhd
 Z7 F./SRC/BENCH/addRoundKey_tb.vhd
@@ -25,9 +25,9 @@ VI>Qi0<P?09`dDmYTHd?QN3
 !s100 dU?aTdgDj`ARgKkoIMnna1
 Z8 OV;C;2020.1;71
 32
-Z9 !s110 1644347500
+Z9 !s110 1644419903
 !i10b 1
-Z10 !s108 1644347499.000000
+Z10 !s108 1644419902.000000
 Z11 !s90 -work|lib_bench|./SRC/BENCH/addRoundKey_tb.vhd|
 Z12 !s107 ./SRC/BENCH/addRoundKey_tb.vhd|
 !i113 1
@@ -39,7 +39,7 @@ R2
 R3
 R4
 DEx4 work 14 addroundkey_tb 0 22 I>Qi0<P?09`dDmYTHd?QN3
-!i122 423
+!i122 666
 l28
 L13 39
 VSQLUMlmNHW4VE1H0SUHJU1
@@ -55,12 +55,12 @@ R12
 R13
 R14
 Eaes_round_tb
-Z15 w1644332666
+Z15 w1644419895
 R1
 R2
 R3
 R4
-!i122 426
+!i122 669
 R5
 Z16 8./SRC/BENCH/AES_Round_tb.vhd
 Z17 F./SRC/BENCH/AES_Round_tb.vhd
@@ -72,7 +72,7 @@ R8
 32
 R9
 !i10b 1
-Z18 !s108 1644347500.000000
+Z18 !s108 1644419903.000000
 Z19 !s90 -work|lib_bench|./SRC/BENCH/AES_Round_tb.vhd|
 Z20 !s107 ./SRC/BENCH/AES_Round_tb.vhd|
 !i113 1
@@ -83,12 +83,12 @@ R1
 R2
 R3
 R4
-DEx4 work 12 aes_round_tb 0 22 N4ii4Lb38k0U1ScIALoH10
-!i122 426
+Z21 DEx4 work 12 aes_round_tb 0 22 N4ii4Lb38k0U1ScIALoH10
+!i122 669
 l39
-L12 61
-Ve]U1a0iA@L4k]NQ;WLj6[3
-!s100 I=8AHh5ez_MggL8VhE30>3
+L12 62
+VioXZ1Cfb0YzOzbNfAA<<T2
+!s100 Y7g?Ob__hVh2gE7omBkDa2
 R8
 32
 R9
@@ -99,27 +99,56 @@ R20
 !i113 1
 R13
 R14
-Eaes_tb
-Z21 w1644332662
+Caes_round_tb_conf
+eAES_Round_tb
+aAES_Round_tb_arch
+DEx7 lib_rtl 9 aes_round 0 22 V^R3iFJLbbeQ9CZLTecW?3
+DAx4 work 12 aes_round_tb 17 aes_round_tb_arch 22 ioXZ1Cfb0YzOzbNfAA<<T2
 R1
 R2
 R3
 R4
-!i122 427
+R21
+!i122 669
+R15
 R5
-Z22 8./SRC/BENCH/AES_tb.vhd
-Z23 F./SRC/BENCH/AES_tb.vhd
+R16
+R17
+l0
+L77 1
+V<`f6[UNY[h?mMI<?42ORE1
+!s100 HWTKoXJ1iP20M]AR1JPMa0
+R8
+32
+Z22 !s110 1644419904
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R13
+R14
+Eaes_tb
+Z23 w1644332662
+R1
+R2
+R3
+R4
+!i122 670
+R5
+Z24 8./SRC/BENCH/AES_tb.vhd
+Z25 F./SRC/BENCH/AES_tb.vhd
 l0
 L9 1
 VTD_R1]=NmTKOYie9c_P1k2
 !s100 ?E]6f;S^e9X`^CNNj2fK@2
 R8
 32
-R9
+R22
 !i10b 1
-R18
-Z24 !s90 -work|lib_bench|./SRC/BENCH/AES_tb.vhd|
-Z25 !s107 ./SRC/BENCH/AES_tb.vhd|
+Z26 !s108 1644419904.000000
+Z27 !s90 -work|lib_bench|./SRC/BENCH/AES_tb.vhd|
+Z28 !s107 ./SRC/BENCH/AES_tb.vhd|
 !i113 1
 R13
 R14
@@ -128,43 +157,43 @@ R1
 R2
 R3
 R4
-Z26 DEx4 work 6 aes_tb 0 22 TD_R1]=NmTKOYie9c_P1k2
-!i122 427
+Z29 DEx4 work 6 aes_tb 0 22 TD_R1]=NmTKOYie9c_P1k2
+!i122 670
 l29
-Z27 L12 39
-Z28 Vci;L1oEWDFPoB2@Mg?OO91
-Z29 !s100 l0gmEIeG5[WVIX3Ia^6Im3
+Z30 L12 39
+Z31 Vci;L1oEWDFPoB2@Mg?OO91
+Z32 !s100 l0gmEIeG5[WVIX3Ia^6Im3
 R8
 32
-R9
+R22
 !i10b 1
-R18
-R24
-R25
+R26
+R27
+R28
 !i113 1
 R13
 R14
 Ecounter_tb
-Z30 w1644332659
+Z33 w1644332659
 R1
 R2
 R3
 R4
-!i122 419
+!i122 662
 R5
-Z31 8./SRC/BENCH/Counter_tb.vhd
-Z32 F./SRC/BENCH/Counter_tb.vhd
+Z34 8./SRC/BENCH/Counter_tb.vhd
+Z35 F./SRC/BENCH/Counter_tb.vhd
 l0
-Z33 L10 1
+Z36 L10 1
 VGE;n3T?3VKCZz3AE^F^?c0
 !s100 ?Z?AVTzoo=e8nOiXSSggW0
 R8
 32
-Z34 !s110 1644347499
+Z37 !s110 1644419902
 !i10b 1
-R10
-Z35 !s90 -work|lib_bench|./SRC/BENCH/Counter_tb.vhd|
-Z36 !s107 ./SRC/BENCH/Counter_tb.vhd|
+Z38 !s108 1644419901.000000
+Z39 !s90 -work|lib_bench|./SRC/BENCH/Counter_tb.vhd|
+Z40 !s107 ./SRC/BENCH/Counter_tb.vhd|
 !i113 1
 R13
 R14
@@ -174,33 +203,33 @@ R2
 R3
 R4
 DEx4 work 10 counter_tb 0 22 GE;n3T?3VKCZz3AE^F^?c0
-!i122 419
+!i122 662
 l24
 L13 46
 VDjW<YHDd<nz]LAckLo[>63
 !s100 >hgT^JNc2VP;@n;gRY2:S0
 R8
 32
-R34
+R37
 !i10b 1
-R10
-R35
-R36
+R38
+R39
+R40
 !i113 1
 R13
 R14
 Ekeyexpansion_table_tb
-Z37 w1644332654
+Z41 w1644332654
 R1
 R2
 R3
 R4
-!i122 425
+!i122 668
 R5
-Z38 8./SRC/BENCH/KeyExpansion_table_tb.vhd
-Z39 F./SRC/BENCH/KeyExpansion_table_tb.vhd
+Z42 8./SRC/BENCH/KeyExpansion_table_tb.vhd
+Z43 F./SRC/BENCH/KeyExpansion_table_tb.vhd
 l0
-R33
+R36
 V4P^JD22i0OaCjnAL?6G5?1
 !s100 DWVGk5hGA0LNXUYe8L;V02
 R8
@@ -208,8 +237,8 @@ R8
 R9
 !i10b 1
 R18
-Z40 !s90 -work|lib_bench|./SRC/BENCH/KeyExpansion_table_tb.vhd|
-Z41 !s107 ./SRC/BENCH/KeyExpansion_table_tb.vhd|
+Z44 !s90 -work|lib_bench|./SRC/BENCH/KeyExpansion_table_tb.vhd|
+Z45 !s107 ./SRC/BENCH/KeyExpansion_table_tb.vhd|
 !i113 1
 R13
 R14
@@ -219,7 +248,7 @@ R2
 R3
 R4
 DEx4 work 21 keyexpansion_table_tb 0 22 4P^JD22i0OaCjnAL?6G5?1
-!i122 425
+!i122 668
 l20
 L13 23
 VfMIFFATO`8HZ3Pj`BhzJG3
@@ -229,21 +258,21 @@ R8
 R9
 !i10b 1
 R18
-R40
-R41
+R44
+R45
 !i113 1
 R13
 R14
 Emixcolumn_tb
-Z42 w1644347169
+Z46 w1644357839
 R1
 R2
 R3
 R4
-!i122 424
+!i122 667
 R5
-Z43 8./SRC/BENCH/MixColumn_tb.vhd
-Z44 F./SRC/BENCH/MixColumn_tb.vhd
+Z47 8./SRC/BENCH/MixColumn_tb.vhd
+Z48 F./SRC/BENCH/MixColumn_tb.vhd
 l0
 L8 1
 Vke]jSP5Y`gh;<[?2a0^_`3
@@ -253,8 +282,8 @@ R8
 R9
 !i10b 1
 R18
-Z45 !s90 -work|lib_bench|./SRC/BENCH/MixColumn_tb.vhd|
-Z46 !s107 ./SRC/BENCH/MixColumn_tb.vhd|
+Z49 !s90 -work|lib_bench|./SRC/BENCH/MixColumn_tb.vhd|
+Z50 !s107 ./SRC/BENCH/MixColumn_tb.vhd|
 !i113 1
 R13
 R14
@@ -263,72 +292,72 @@ R1
 R2
 R3
 R4
-Z47 DEx4 work 12 mixcolumn_tb 0 22 ke]jSP5Y`gh;<[?2a0^_`3
-!i122 424
-l31
-L12 46
-V>>0WWXX8:kHe>;NGiQg311
-!s100 =o04iOLacAInEN2EHJZD91
+Z51 DEx4 work 12 mixcolumn_tb 0 22 ke]jSP5Y`gh;<[?2a0^_`3
+!i122 667
+l23
+L12 31
+VjIg9zn7FClziG5=1`nhm?2
+!s100 KfGY8950b_L9kJR?ndc^L2
 R8
 32
 R9
 !i10b 1
 R18
-R45
-R46
+R49
+R50
 !i113 1
 R13
 R14
 Cmixcolumn_tb_conf
 eMixColumn_tb
 aMixColumn_tb_arch
-DEx7 lib_rtl 9 mixcolumn 0 22 MfC@cM<WbR62T:LRJE1Cb2
-DAx4 work 12 mixcolumn_tb 17 mixcolumn_tb_arch 22 >>0WWXX8:kHe>;NGiQg311
+DEx7 lib_rtl 9 mixcolumn 0 22 JD]>XdW60Wc>l;02j3VXi1
+DAx4 work 12 mixcolumn_tb 17 mixcolumn_tb_arch 22 jIg9zn7FClziG5=1`nhm?2
 R1
 R2
 R3
 R4
-R47
-!i122 424
-R42
+R51
+!i122 667
+R46
 R5
-R43
-R44
+R47
+R48
 l0
-L59 1
-Vf4]SDiEXG3Eh;LRDV=0h81
-!s100 PiUd8cn<gY_ED_n=S4C1b0
+L44 1
+Vd5M_nz;K>@EcHbzVJR51H1
+!s100 G;ZJnQ`n:5M_KPRPLYBdb2
 R8
 32
 R9
 !i10b 1
 R18
-R45
-R46
+R49
+R50
 !i113 1
 R13
 R14
 Esbox_inv_tb
-Z48 w1644338916
+Z52 w1644338916
 R1
 R2
 R3
 R4
-!i122 420
+!i122 663
 R5
-Z49 8./SRC/BENCH/Sbox_tb.vhd
-Z50 F./SRC/BENCH/Sbox_tb.vhd
+Z53 8./SRC/BENCH/Sbox_tb.vhd
+Z54 F./SRC/BENCH/Sbox_tb.vhd
 l0
-R33
+R36
 VTfj`61MWo=zCG7?RHRMTl1
 !s100 X;?8iW5YaZbnGDBTi:TPa1
 R8
 32
-R34
+R37
 !i10b 1
 R10
-Z51 !s90 -work|lib_bench|./SRC/BENCH/Sbox_tb.vhd|
-Z52 !s107 ./SRC/BENCH/Sbox_tb.vhd|
+Z55 !s90 -work|lib_bench|./SRC/BENCH/Sbox_tb.vhd|
+Z56 !s107 ./SRC/BENCH/Sbox_tb.vhd|
 !i113 1
 R13
 R14
@@ -338,42 +367,42 @@ R2
 R3
 R4
 DEx4 work 11 sbox_inv_tb 0 22 Tfj`61MWo=zCG7?RHRMTl1
-!i122 420
+!i122 663
 l25
 L14 335
 V_O1D<U8R>^e^V2TFeV0WQ3
 !s100 JdPO9TL5=5zLP_RN<M@CT3
 R8
 32
-R34
+R37
 !i10b 1
 R10
-R51
-R52
+R55
+R56
 !i113 1
 R13
 R14
 Eshiftrows_tb
-Z53 w1644332643
+Z57 w1644332643
 R1
 R2
 R3
 R4
-!i122 422
+!i122 665
 R5
-Z54 8./SRC/BENCH/ShiftRows_tb.vhd
-Z55 F./SRC/BENCH/ShiftRows_tb.vhd
+Z58 8./SRC/BENCH/ShiftRows_tb.vhd
+Z59 F./SRC/BENCH/ShiftRows_tb.vhd
 l0
 L9 1
 V4YSOiOjm@JVPSJ3?2fNm71
 !s100 =]=@b6bU[R7_<mE7:AghC2
 R8
 32
-R34
+R37
 !i10b 1
 R10
-Z56 !s90 -work|lib_bench|./SRC/BENCH/ShiftRows_tb.vhd|
-Z57 !s107 ./SRC/BENCH/ShiftRows_tb.vhd|
+Z60 !s90 -work|lib_bench|./SRC/BENCH/ShiftRows_tb.vhd|
+Z61 !s107 ./SRC/BENCH/ShiftRows_tb.vhd|
 !i113 1
 R13
 R14
@@ -383,18 +412,18 @@ R2
 R3
 R4
 DEx4 work 12 shiftrows_tb 0 22 4YSOiOjm@JVPSJ3?2fNm71
-!i122 422
+!i122 665
 l25
 L13 27
 VGD24Q?f6NF`IYXLO4i:[]0
 !s100 R1V:?JklSFU4VggRA3b[n3
 R8
 32
-R34
+R37
 !i10b 1
 R10
-R56
-R57
+R60
+R61
 !i113 1
 R13
 R14
@@ -402,24 +431,24 @@ Pstate_definition_package
 R3
 R4
 !i122 193
-Z58 w1642053569
+Z62 w1642053569
 R5
-Z59 8./SRC/PACKAGE/state_definition_package.vhd
-Z60 F./SRC/PACKAGE/state_definition_package.vhd
+Z63 8./SRC/PACKAGE/state_definition_package.vhd
+Z64 F./SRC/PACKAGE/state_definition_package.vhd
 l0
-R33
+R36
 V6_9=nf1J7o<N7;ok9]g5<1
 !s100 Oh]aG[emAia6e2JcGPfVh3
 R8
 32
 b1
-Z61 !s110 1644333088
+Z65 !s110 1644333088
 !i10b 1
-Z62 !s108 1644333088.000000
-Z63 !s90 -work|LIB_AES|./SRC/PACKAGE/state_definition_package.vhd|
-Z64 !s107 ./SRC/PACKAGE/state_definition_package.vhd|
+Z66 !s108 1644333088.000000
+Z67 !s90 -work|LIB_AES|./SRC/PACKAGE/state_definition_package.vhd|
+Z68 !s107 ./SRC/PACKAGE/state_definition_package.vhd|
 !i113 1
-Z65 o-work LIB_AES
+Z69 o-work LIB_AES
 R14
 Bbody
 DPx4 work 24 state_definition_package 0 22 6_9=nf1J7o<N7;ok9]g5<1
@@ -432,35 +461,35 @@ VQfbD1?aHNf5a?XMa@`mWb2
 !s100 4EFBD2?]TSel42on?fLb=3
 R8
 32
-R61
-!i10b 1
-R62
-R63
-R64
-!i113 1
 R65
+!i10b 1
+R66
+R67
+R68
+!i113 1
+R69
 R14
 Esubbytes_tb
-Z66 w1644342403
+Z70 w1644342403
 R1
 R2
 R3
 R4
-!i122 421
+!i122 664
 R5
-Z67 8./SRC/BENCH/SubBytes_tb.vhd
-Z68 F./SRC/BENCH/SubBytes_tb.vhd
+Z71 8./SRC/BENCH/SubBytes_tb.vhd
+Z72 F./SRC/BENCH/SubBytes_tb.vhd
 l0
 L9 1
 V5KiBCoD3gP6NCz6LMGUD^2
 !s100 STBz<zbRaRXKg31kbdY=40
 R8
 32
-R34
+R37
 !i10b 1
 R10
-Z69 !s90 -work|lib_bench|./SRC/BENCH/SubBytes_tb.vhd|
-Z70 !s107 ./SRC/BENCH/SubBytes_tb.vhd|
+Z73 !s90 -work|lib_bench|./SRC/BENCH/SubBytes_tb.vhd|
+Z74 !s107 ./SRC/BENCH/SubBytes_tb.vhd|
 !i113 1
 R13
 R14
@@ -469,19 +498,19 @@ R1
 R2
 R3
 R4
-Z71 DEx4 work 11 subbytes_tb 0 22 5KiBCoD3gP6NCz6LMGUD^2
-!i122 421
+Z75 DEx4 work 11 subbytes_tb 0 22 5KiBCoD3gP6NCz6LMGUD^2
+!i122 664
 l25
 L13 28
 VGVGFe3TVkDf3z[SHj`:;m0
 !s100 OBN64Uo>XY:;zoP@7E8b21
 R8
 32
-R34
+R37
 !i10b 1
 R10
-R69
-R70
+R73
+R74
 !i113 1
 R13
 R14
@@ -494,23 +523,23 @@ R1
 R2
 R3
 R4
-R71
-!i122 421
-R66
+R75
+!i122 664
+R70
 R5
-R67
-R68
+R71
+R72
 l0
 L42 1
 VDhBS@hfoG700e0^E[;W4]1
 !s100 4dbl_MTGlBdBo5d57R5^>2
 R8
 32
-R34
+R37
 !i10b 1
 R10
-R69
-R70
+R73
+R74
 !i113 1
 R13
 R14

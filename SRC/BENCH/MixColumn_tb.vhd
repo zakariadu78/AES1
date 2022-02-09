@@ -14,19 +14,11 @@ architecture MixColumn_tb_arch of MixColumn_tb is
     port (
       data_i : IN type_state;
       data_o : OUT type_state;
-      mult2 : OUT type_state;
-      mult4 : OUT type_state;
-      mult8 : OUT type_state;
-      mult9 : OUT type_state;
-      multb : OUT type_state;
-      multd : OUT type_state;
-      multe : OUT type_state;
 		enablemc_i : in std_logic);
     end component;
 
     signal enablemc_i_s :  std_logic; 
     signal data_i_s, data_o_s : type_state; 
-    signal mult2_s, mult4_s, mult8_s, mult9_s, multb_s, multd_s, multe_s : type_state; 
 
 begin 
     DUT : MixColumn
@@ -34,14 +26,7 @@ begin
         (
             data_i => data_i_s,
             data_o => data_o_s,
-            enablemc_i => enablemc_i_s,
-            mult2 => mult2_s,
-            mult4 => mult4_s,
-            mult8 => mult8_s,
-            mult9 => mult9_s,
-            multb => multb_s,
-            multd => multd_s,
-            multe => multe_s 
+            enablemc_i => enablemc_i_s
         );
 
       enablemc_i_s <= '1'; 

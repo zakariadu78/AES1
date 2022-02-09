@@ -9,13 +9,6 @@ ENTITY MixColumn IS
 	PORT (
 		data_i : IN type_state;
 		data_o : OUT type_state;
-		mult2 : OUT type_state;
-		mult4 : OUT type_state;
-		mult8 : OUT type_state;
-		mult9 : OUT type_state;
-		multb : OUT type_state;
-		multd : OUT type_state;
-		multe : OUT type_state;
 		enablemc_i : IN STD_LOGIC);
 END MixColumn;
 
@@ -52,13 +45,7 @@ BEGIN
 		data_o_s(colonne) <= col_o_s(colonne);
 	END GENERATE L0;
 	
-	mult2 <= mult2_s;
-	mult4 <= mult4_s;
-	mult8 <= mult8_s;
-	mult9 <= mult9_s;
-	multb <= multb_s;
-	multd <= multd_s;
-	multe <= multe_s;
+
 
 	data_o <= data_o_s WHEN enablemc_i = '1' ELSE
 		data_i;

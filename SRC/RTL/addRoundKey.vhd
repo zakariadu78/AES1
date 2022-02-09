@@ -17,6 +17,7 @@ architecture AddRoundKey_arch of AddRoundKey is
 
 begin
 
+
 Data_o(0)(0) <= Data_i(0)(0) xor Key_i(0)(0);
 Data_o(0)(1) <= Data_i(0)(1) xor Key_i(0)(1);
 Data_o(0)(2) <= Data_i(0)(2) xor Key_i(0)(2);

@@ -1,32 +1,114 @@
-vsim lib_bench.mixcolumn_tb_conf
-# vsim lib_bench.mixcolumn_tb_conf 
-# Start time: 20:15:43 on Feb 08,2022
+vsim lib_bench.aes_round_tb_conf
+# vsim lib_bench.aes_round_tb_conf 
+# Start time: 12:33:00 on Feb 09,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.mixcolumn_tb_conf
-# Loading lib_bench.mixcolumn_tb(mixcolumn_tb_arch)
+# Loading lib_bench.aes_round_tb_conf
+# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
+# Loading lib_rtl.aes_round(aes_round_arch)
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+# Loading lib_rtl.subbytes(subbytes_arch)
+# Loading lib_rtl.sbox_inv(sbox_inv_arch)
+# Loading lib_rtl.addroundkey(addroundkey_arch)
+# Loading lib_rtl.mixcolumn(mixcolumn_arch)
+add wave -position insertpoint  \
+sim:/aes_round_tb/clock_s \
+sim:/aes_round_tb/currentKey_s \
+sim:/aes_round_tb/currentText_s \
+sim:/aes_round_tb/data_o_s \
+sim:/aes_round_tb/enableInvMixColumns_s \
+sim:/aes_round_tb/firstRound_s \
+sim:/aes_round_tb/Reset_s \
+sim:/aes_round_tb/signal_inter_AddRoundKey_MixColumns \
+sim:/aes_round_tb/signal_inter_ShiftRows_SubBytes \
+sim:/aes_round_tb/signal_inter_SubBytes_AddRoundKey
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: zakaria  Hostname: DESKTOP-5EI9G35  ProcessID: 8112
+#           Attempting to use alternate WLF file "./wlftrs5kve".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrs5kve
+radix h 
+# hexadecimal
+run 800 ns
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+radix h 
+# hexadecimal
+add wave -position insertpoint  \
+sim:/aes_round_tb/clock_s \
+sim:/aes_round_tb/currentKey_s \
+sim:/aes_round_tb/currentText_s \
+sim:/aes_round_tb/data_o_s \
+sim:/aes_round_tb/enableInvMixColumns_s \
+sim:/aes_round_tb/firstRound_s \
+sim:/aes_round_tb/Reset_s \
+sim:/aes_round_tb/signal_inter_AddRoundKey_MixColumns \
+sim:/aes_round_tb/signal_inter_ShiftRows_SubBytes \
+sim:/aes_round_tb/signal_inter_SubBytes_AddRoundKey
+run 800 ns
+restart -f
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_round_tb_conf
+# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
+# Loading lib_rtl.aes_round(aes_round_arch)
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+# Loading lib_rtl.subbytes(subbytes_arch)
+# Loading lib_rtl.sbox_inv(sbox_inv_arch)
+# Loading lib_rtl.addroundkey(addroundkey_arch)
+# Loading lib_rtl.mixcolumn(mixcolumn_arch)
+run 800 ns
+restart -f
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_round_tb_conf
+# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
+# Loading lib_rtl.aes_round(aes_round_arch)
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+# Loading lib_rtl.subbytes(subbytes_arch)
+# Loading lib_rtl.sbox_inv(sbox_inv_arch)
+# Loading lib_rtl.addroundkey(addroundkey_arch)
+# Loading lib_rtl.mixcolumn(mixcolumn_arch)
+radix h
+# hexadecimal
+ run 800 ns
+restart -f
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_round_tb_conf
+# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
+# Loading lib_rtl.aes_round(aes_round_arch)
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+# Loading lib_rtl.subbytes(subbytes_arch)
+# Loading lib_rtl.sbox_inv(sbox_inv_arch)
+# Loading lib_rtl.addroundkey(addroundkey_arch)
+# Loading lib_rtl.mixcolumn(mixcolumn_arch)
+radix h
+# hexadecimal
+run 800 ns
+restart -f
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_round_tb_conf
+# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
+# Loading lib_rtl.aes_round(aes_round_arch)
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+# Loading lib_rtl.subbytes(subbytes_arch)
+# Loading lib_rtl.sbox_inv(sbox_inv_arch)
+# Loading lib_rtl.addroundkey(addroundkey_arch)
 # Loading lib_rtl.mixcolumn(mixcolumn_arch)
 radix h 
 # hexadecimal
-run 200ns
-vsim lib_bench.aes_round_tb
-# End time: 20:51:40 on Feb 08,2022, Elapsed time: 0:35:57
-# Errors: 0, Warnings: 0
-# vsim lib_bench.aes_round_tb 
-# Start time: 20:51:40 on Feb 08,2022
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
+run 800 ns
+restart -f
 # Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_round_tb_conf
 # Loading lib_bench.aes_round_tb(aes_round_tb_arch)
 # Loading lib_rtl.aes_round(aes_round_arch)
-# ** Fatal: (vsim-3817) Port "firstRound_i" of entity "aes_round" is not in the component being instantiated.
-#    Time: 0 ps  Iteration: 0  Instance: /aes_round_tb/DUT File: ./SRC/RTL/AES_Round.vhd Line: 14
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 20:51:40 on Feb 08,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+# Loading lib_rtl.subbytes(subbytes_arch)
+# Loading lib_rtl.sbox_inv(sbox_inv_arch)
+# Loading lib_rtl.addroundkey(addroundkey_arch)
+# Loading lib_rtl.mixcolumn(mixcolumn_arch)
+radix h 
+# hexadecimal
+run 800 ns

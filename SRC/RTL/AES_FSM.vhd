@@ -24,13 +24,13 @@ architecture FSM_AES_Arch of FSM_AES is
 type etat is (idle,Round10 , Round9_1, Round0, fin );
 signal etatPresent, etatFutur : etat; 
 
-
 -- Description des transtions des états
+
 begin
 
     init: process(clock_i,resetb_i)
     begin 
-        if (resetb_i='0') then 
+        if (resetb_i='1') then 
             etatPresent <= idle; 
         elsif  (clock_i'event and clock_i = '1') then
                 etatPresent <= etatFutur;  
@@ -91,7 +91,7 @@ begin
                     enableCounter_o <= '1';
                     enableOutput_o <= '0';
                     enableMixColumn_o <= '0'; 
-                    enableRoundComputing_o <= '0'; -- Car on n'effectue que AddRoundKey
+                    firstRound_o <= '1'; 
                     getciphertext_o <= '1';
                     resetCounter_o <= '0';
                 when Round9_1 => 
@@ -99,15 +99,15 @@ begin
                     enableMixColumn_o <= '1'; 
                     enableCounter_o <= '1';
                     enableOutput_o <= '0';
-                    enableRoundComputing_o <= '1';
+                    firstRound_o <= '0';
                     getciphertext_o <= '0';
                     resetCounter_o <= '0';
                 when Round0 => 
                     done_o <= '0';
                     enableMixColumn_o <= '0'; 
-                    enableCounter_o <= '0'; -- Car on arrive à la fin
+                    enableCounter_o <= '0'; 
                     enableOutput_o <= '0';
-                    enableRoundComputing_o <= '1';
+                    firstRound_o <= '0';
                     getciphertext_o <= '0';
                     resetCounter_o <= '0';
                 when fin => 
