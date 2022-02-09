@@ -1,32 +1,32 @@
-library IEEE; 
-use IEEE.std_logic_1164.all; 
-use IEEE.numeric_std.all;
-library lib_rtl;
-library lib_aes;
-use lib_aes.state_definition_package.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+LIBRARY lib_rtl;
+LIBRARY lib_aes;
+USE lib_aes.state_definition_package.ALL;
 
-entity Counter is
-  port(resetb_i : in  std_logic;
-       enable_i : in  std_logic;
-       clock_i  : in  std_logic;
-       count_o  : out bit4);
-end entity Counter;
+ENTITY Counter IS
+  PORT (
+    resetb_i : IN STD_LOGIC;
+    enable_i : IN STD_LOGIC;
+    clock_i : IN STD_LOGIC;
+    count_o : OUT bit4);
+END ENTITY Counter;
 
-architecture Counter_arch of Counter is
-  signal counter_s : integer range 0 to 15;
-begin
-  P0 : process(clock_i, resetb_i, enable_i)
-  begin
-    if (resetb_i = '0') then
+ARCHITECTURE Counter_arch OF Counter IS
+  SIGNAL counter_s : INTEGER RANGE 0 TO 15;
+BEGIN
+  P0 : PROCESS (clock_i, resetb_i, enable_i)
+  BEGIN
+    IF (resetb_i = '1') THEN
       counter_s <= 10;
-    elsif (clock_i'event and clock_i = '1') then
-      if (enable_i = '1') then
+    ELSIF (clock_i'event AND clock_i = '1') THEN
+      IF (enable_i = '1') THEN
         counter_s <= counter_s - 1;
-      end if;
-    end if;
-  end process P0;
+      END IF;
+    END IF;
+  END PROCESS P0;
 
-  count_o <= std_logic_vector(to_unsigned(counter_s, 4));
+  count_o <= STD_LOGIC_VECTOR(to_unsigned(counter_s, 4));
 
-end architecture Counter_arch;
-
+END ARCHITECTURE Counter_arch;

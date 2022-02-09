@@ -38,13 +38,13 @@ architecture AES_tb_arch of AES_tb is
         data_o => data_o_s
       );
 
-    start_s <= '0', '1' after 60 ns, '0' after 85 ns, '1' after 560 ns, '0' after 585 ns;
+    start_s <= '0', '1' after 30 ns;
     clock_s <= not clock_s after 10 ns;
-    reset_s <= '0', '1' after 10 ns, '0' after 35 ns;
+    reset_s <= '0';
     data_i_s <= (
-    (x"8c",x"11",x"35",x"44"),
-    (x"06",x"ad",x"44",x"88"),
-    (x"de",x"ca",x"ec",x"83"),
-    (x"aa",x"03",x"43",x"06"));
+    (x"8c",x"06",x"de",x"aa"),
+    (x"11",x"ad",x"ca",x"03"),
+    (x"35",x"44",x"ec",x"43"),
+    (x"44",x"88",x"83",x"06"));
 
 end architecture AES_tb_arch; 

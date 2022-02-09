@@ -18,7 +18,6 @@ port (
   currentText_i : IN type_state;
   enableInvMixColumns_i : IN STD_LOGIC;
   firstRound_i : IN STD_LOGIC;
-  Reset_i : IN STD_LOGIC;
   data_o : OUT type_state;
   inter_ShiftRows_SubBytes : OUT type_state;
   inter_SubBytes_AddRoundKey : OUT type_state;
@@ -28,7 +27,7 @@ port (
 end component AES_Round; 
 
 signal clock_s : std_logic :='0'; 
-signal enableInvMixColumns_s, firstRound_s, Reset_s: std_logic; 
+signal enableInvMixColumns_s, firstRound_s: std_logic; 
 signal currentKey_s : type_key; 
 signal currentText_s, data_o_s : type_state; 
 signal signal_inter_ShiftRows_SubBytes : type_state;
@@ -45,7 +44,6 @@ begin
     currentText_i => currentText_s,
     enableInvMixColumns_i => enableInvMixColumns_s,
     firstRound_i => firstRound_s,
-    Reset_i => Reset_s,
     data_o => data_o_s,
     inter_ShiftRows_SubBytes => signal_inter_ShiftRows_SubBytes,
     inter_SubBytes_AddRoundKey => signal_inter_SubBytes_AddRoundKey,
@@ -67,7 +65,6 @@ currentText_s <= ((x"6b",x"88",x"a6",x"db"),
 
 enableInvMixColumns_s <= '1';
 firstRound_s <= '0';
-Reset_s <= '0';
 
 
 end architecture AES_Round_tb_arch; 

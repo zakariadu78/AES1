@@ -14,7 +14,7 @@ entity FSM_AES is
         start_i : in std_logic;
         done_o,enableCounter_o,enableMixColumn_o,
         enableOutput_o,enableRoundComputing_o,getciphertext_o,
-        resetCounter_o : out std_logic
+        resetCounter_o,firstRound_o : out std_logic
     ); 
 end FSM_AES; 
 
@@ -34,8 +34,6 @@ begin
             etatPresent <= idle; 
         elsif  (clock_i'event and clock_i = '1') then
                 etatPresent <= etatFutur;  
-        else 
-                etatPresent <= idle; 
         end if; 
     end process; 
 
@@ -81,6 +79,7 @@ begin
                 when idle => 
                     done_o <= '0';
                     enableMixColumn_o <= '0'; 
+                    firstRound_o <= '0'; 
                     enableCounter_o <= '0';
                     enableOutput_o <= '0';
                     enableRoundComputing_o <= '0';
@@ -93,6 +92,7 @@ begin
                     enableMixColumn_o <= '0'; 
                     firstRound_o <= '1'; 
                     getciphertext_o <= '1';
+                    enableRoundComputing_o <= '1';
                     resetCounter_o <= '0';
                 when Round9_1 => 
                     done_o <= '0';
@@ -101,6 +101,7 @@ begin
                     enableOutput_o <= '0';
                     firstRound_o <= '0';
                     getciphertext_o <= '0';
+                    enableRoundComputing_o <= '1';
                     resetCounter_o <= '0';
                 when Round0 => 
                     done_o <= '0';
@@ -109,12 +110,14 @@ begin
                     enableOutput_o <= '0';
                     firstRound_o <= '0';
                     getciphertext_o <= '0';
+                    enableRoundComputing_o <= '1';
                     resetCounter_o <= '0';
                 when fin => 
                     done_o <= '1';
                     enableMixColumn_o <= '0'; 
                     enableCounter_o <= '0'; 
                     enableOutput_o <= '1';
+                    firstRound_o <= '0';
                     enableRoundComputing_o <= '0';
                     getciphertext_o <= '0';
                     resetCounter_o <= '0';

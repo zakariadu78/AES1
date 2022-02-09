@@ -37,7 +37,7 @@ architecture AES_arch of AES is
         round_i : in bit4;
         start_i : in std_logic;
         done_o,enableCounter_o,enableMixColumn_o,
-        enableOutput_o,enableRoundComputing_o,getciphertext_o,
+        enableOutput_o,firstRound_o,getciphertext_o,
         resetCounter_o : out std_logic
     ); 
     end component FSM_AES; 
@@ -51,13 +51,15 @@ architecture AES_arch of AES is
 
     component AES_Round is 
     port ( 
-        clock_i : in std_logic; 
-        currentKey_i : in type_key; 
-        currentText_i : in type_state; 
-        enableInvMixColumns_i : in std_logic; 
-        enableRoundComputing_i : in std_logic; 
-        Reset_i : in std_logic;
-        data_o : out type_state
+        clock_i : IN STD_LOGIC;
+        currentKey_i : IN type_key;
+        currentText_i : IN type_state;
+        enableInvMixColumns_i : IN STD_LOGIC;
+        firstRound_i : IN STD_LOGIC;
+        data_o : OUT type_state;
+        inter_ShiftRows_SubBytes : OUT type_state;
+        inter_SubBytes_AddRoundKey : OUT type_state;
+        inter_AddRoundKey_MixColumns : OUT type_state
         ); 
     end component AES_Round; 
 
@@ -70,7 +72,7 @@ port (
 end component MUX; 
 signal Counter_s : bit4; 
 signal done_s,enableCounter_s,enableMixColumn_s,enableOutput_s,
-enableRoundComputing_s,getciphertext_s,resetCounter_s : std_logic; 
+firstRound_s,getciphertext_s,resetCounter_s : std_logic; 
 signal ExpansionKey_s : type_key; 
 signal data_o_s : type_state;
 signal currentText_s : type_state; 
@@ -96,7 +98,7 @@ begin
             enableCounter_o => enableCounter_s,
             enableMixColumn_o => enableMixColumn_s,
             enableOutput_o => enableOutput_s,
-            enableRoundComputing_o => enableRoundComputing_s,
+            firstRound_o => firstRound_s,
             getciphertext_o => getciphertext_s,
             resetCounter_o => resetCounter_s
         );
@@ -113,8 +115,7 @@ begin
             currentKey_i => ExpansionKey_s,
             currentText_i => currentText_s,
             enableInvMixColumns_i => enableMixColumn_s,
-            enableRoundComputing_i => enableRoundComputing_s,
-            Reset_i => reset_i,
+            firstRound_i => firstRound_s,
             data_o => data_o_s
         );
 
@@ -128,7 +129,7 @@ begin
 
     seq_0 : process (clock_i, reset_i) is
     begin -- process seq_0
-    if reset_i = '0' then -- asynchronous reset (active-low)
+    if reset_i = '1' then -- asynchronous reset (active-low)
         state_s <= ((others => (others => (others => '0'))));
     -- or use 2 x for ... generate
     elsif clock_i'event and clock_i = '1' and enableOutput_s = '1' then -- rising clock

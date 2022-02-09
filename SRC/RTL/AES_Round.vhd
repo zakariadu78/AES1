@@ -12,7 +12,6 @@ ENTITY AES_Round IS
     currentText_i : IN type_state;
     enableInvMixColumns_i : IN STD_LOGIC;
     firstRound_i : IN STD_LOGIC;
-    Reset_i : IN STD_LOGIC;
     data_o : OUT type_state;
     inter_ShiftRows_SubBytes : OUT type_state;
     inter_SubBytes_AddRoundKey : OUT type_state;
@@ -89,29 +88,24 @@ BEGIN
       IF firstRound_i = '0' THEN
         Data_o <= data_o_s;
       ELSE
-      Data_o <= signal_inter_AddRoundKey_MixColumns;
+        Data_o <= signal_inter_AddRoundKey_MixColumns;
       END IF;
     END IF;
   END PROCESS seq;
-
-  
 END AES_Round_arch;
-
-
-configuration AES_Round_conf of AES_Round is 
-  for AES_Round_arch 
-    for all:AddRoundKey
-      use entity lib_rtl.AddRoundKey(AddRoundKey_arch);
-    end for; 
-    for all:ShiftRows
-      use entity lib_rtl.ShiftRows(ShiftRows_arch);
-    end for; 
-    for all:SubBytes
-      use configuration lib_rtl.SubBytes_conf; 
-    end for; 
-    for all:MixColumn
-      use entity lib_rtl.MixColumn(MixColumn_arch);
-    end for; 
-  end for;
-end AES_Round_conf; 
-
+CONFIGURATION AES_Round_conf OF AES_Round IS
+  FOR AES_Round_arch
+    FOR ALL : AddRoundKey
+      USE ENTITY lib_rtl.AddRoundKey(AddRoundKey_arch);
+    END FOR;
+    FOR ALL : ShiftRows
+      USE ENTITY lib_rtl.ShiftRows(ShiftRows_arch);
+    END FOR;
+    FOR ALL : SubBytes
+      USE CONFIGURATION lib_rtl.SubBytes_conf;
+    END FOR;
+    FOR ALL : MixColumn
+      USE ENTITY lib_rtl.MixColumn(MixColumn_arch);
+    END FOR;
+  END FOR;
+END AES_Round_conf;

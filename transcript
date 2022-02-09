@@ -112,3 +112,121 @@ restart -f
 radix h 
 # hexadecimal
 run 800 ns
+restart -f
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_round_tb_conf
+# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
+# Loading lib_rtl.aes_round(aes_round_arch)
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+# Loading lib_rtl.subbytes(subbytes_arch)
+# Loading lib_rtl.sbox_inv(sbox_inv_arch)
+# Loading lib_rtl.addroundkey(addroundkey_arch)
+# Loading lib_rtl.mixcolumn(mixcolumn_arch)
+vsim lib_bench.aes_tb
+# End time: 17:11:46 on Feb 09,2022, Elapsed time: 4:38:46
+# Errors: 0, Warnings: 0
+# vsim lib_bench.aes_tb 
+# Start time: 17:11:46 on Feb 09,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_tb(aes_tb_arch)
+# Loading lib_rtl.aes(aes_arch)
+# ** Error: (vsim-13) Recompile lib_rtl.counter because lib_aes.state_definition_package has changed.
+# ** Error (suppressible): (vsim-12) Recompile lib_rtl.counter(counter_arch) after lib_rtl.counter is recompiled.
+# ** Error: (vsim-13) Recompile lib_rtl.counter(counter_arch) because lib_aes.state_definition_package has changed.
+# Load interrupted
+# Error loading design
+# End time: 17:11:46 on Feb 09,2022, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vsim lib_bench.aes_tb
+# vsim lib_bench.aes_tb 
+# Start time: 17:13:24 on Feb 09,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_tb(aes_tb_arch)
+# Loading lib_rtl.aes(aes_arch)
+# ** Error: (vsim-13) Recompile lib_rtl.counter because lib_aes.state_definition_package has changed.
+# ** Error (suppressible): (vsim-12) Recompile lib_rtl.counter(counter_arch) after lib_rtl.counter is recompiled.
+# ** Error: (vsim-13) Recompile lib_rtl.counter(counter_arch) because lib_aes.state_definition_package has changed.
+# Load interrupted
+# Error loading design
+# End time: 17:13:24 on Feb 09,2022, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+restart -f
+# No Design Loaded!
+vsim lib_bench.aes_tb
+# vsim lib_bench.aes_tb 
+# Start time: 17:14:29 on Feb 09,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_tb(aes_tb_arch)
+# Loading lib_rtl.aes(aes_arch)
+# Loading lib_rtl.counter(counter_arch)
+# Loading lib_rtl.fsm_aes(fsm_aes_arch)
+# Loading lib_rtl.keyexpansion_table(keyexpansion_table_arch)
+# Loading lib_rtl.aes_round(aes_round_arch)
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+# Loading lib_rtl.subbytes(subbytes_arch)
+# Loading lib_rtl.sbox_inv(sbox_inv_arch)
+# Loading lib_rtl.addroundkey(addroundkey_arch)
+# Loading lib_rtl.mixcolumn(mixcolumn_arch)
+# Loading lib_rtl.mux(mux_arch)
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+add wave -position insertpoint  \
+sim:/aes_tb/aes_on_s \
+sim:/aes_tb/clock_s \
+sim:/aes_tb/data_i_s \
+sim:/aes_tb/data_o_s \
+sim:/aes_tb/reset_s \
+sim:/aes_tb/start_s
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: zakaria  Hostname: DESKTOP-5EI9G35  ProcessID: 8112
+#           Attempting to use alternate WLF file "./wlftds6zme".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftds6zme
+add wave -position end sim:/aes_tb/DUT/*
+radix h 
+# hexadecimal
+run 800 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
