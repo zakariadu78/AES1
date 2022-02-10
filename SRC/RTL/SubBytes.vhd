@@ -1,52 +1,50 @@
-library IEEE; 
-use IEEE.std_logic_1164.all; 
-use IEEE.numeric_std.all;
-library lib_rtl;
-library lib_aes;
-use lib_aes.state_definition_package.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+LIBRARY lib_rtl;
+LIBRARY lib_aes;
+USE lib_aes.state_definition_package.ALL;
+ENTITY SubBytes IS
+  PORT (
+    data_i : IN type_state;
+    data_o : OUT type_state
+  );
+END SubBytes;
 
+ARCHITECTURE SubBytes_arch OF SubBytes IS
 
-entity SubBytes is 
-  port ( 
-    data_i : in type_state;
-    data_o : out type_state
-  ); 
-end SubBytes; 
-
-architecture SubBytes_arch of SubBytes is 
-
-component Sbox_inv 
-  port (
-    data_i  : in bit8; 
-    data_o  : out bit8
+  COMPONENT Sbox_inv
+    PORT (
+      data_i : IN bit8;
+      data_o : OUT bit8
     );
-end component;
+  END COMPONENT;
 
-signal temp : bit8;
+  SIGNAL temp : bit8;
 
-begin 
+BEGIN
 
-temp <=  data_i(0)(0); 
+  temp <= data_i(0)(0);
 
-loopi : for i in 0 to 3 generate 
-    loopj : for j in 0 to 3 generate 
-        SBOX : Sbox_inv port map (
-          data_i => data_i(i)(j),
-          data_o => data_o(i)(j)
-        ); 
-    end generate; 
-end generate;
+  loopi : FOR i IN 0 TO 3 GENERATE
+    loopj : FOR j IN 0 TO 3 GENERATE
+      SBOX : Sbox_inv PORT MAP(
+        data_i => data_i(i)(j),
+        data_o => data_o(i)(j)
+      );
+    END GENERATE;
+  END GENERATE;
 
-end SubBytes_arch; 
+END SubBytes_arch;
 
-configuration SubBytes_conf of SubBytes is 
-  for SubBytes_arch 
-    for loopi
-      for loopj
-        for all : Sbox_inv
-          use entity lib_rtl.Sbox_Inv(Sbox_inv_arch); 
-        end for; 
-      end for; 
-    end for; 
-  end for; 
-end SubBytes_conf; 
+CONFIGURATION SubBytes_conf OF SubBytes IS
+  FOR SubBytes_arch
+    FOR loopi
+      FOR loopj
+        FOR ALL : Sbox_inv
+          USE ENTITY lib_rtl.Sbox_Inv(Sbox_inv_arch);
+        END FOR;
+      END FOR;
+    END FOR;
+  END FOR;
+END SubBytes_conf;

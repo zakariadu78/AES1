@@ -1,50 +1,48 @@
-library IEEE; 
-use IEEE.std_logic_1164.all; 
-use IEEE.numeric_std.all;
-library lib_rtl;
-library lib_aes;
-use lib_aes.state_definition_package.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+LIBRARY lib_rtl;
+LIBRARY lib_aes;
+USE lib_aes.state_definition_package.ALL;
+ENTITY AES_tb IS
+END ENTITY AES_tb;
 
+ARCHITECTURE AES_tb_arch OF AES_tb IS
+  COMPONENT AES IS
+    PORT (
+      start_i : IN STD_LOGIC;
+      clock_i : IN STD_LOGIC;
+      reset_i : IN STD_LOGIC;
+      data_i : IN type_state;
+      aes_on_o : OUT STD_LOGIC;
+      data_o : OUT type_state
+    );
+  END COMPONENT AES;
 
-entity AES_tb is 
-end entity AES_tb; 
+  SIGNAL start_s, reset_s, aes_on_s : STD_LOGIC;
 
-architecture AES_tb_arch of AES_tb is 
-  component AES is 
-  port ( 
-      start_i : in std_logic; 
-      clock_i : in std_logic;
-      reset_i : in std_logic;
-      data_i : in type_state; 
-      aes_on_o : out std_logic; 
-      data_o : out type_state
-      ); 
-  end component AES;
-  
-  signal start_s, reset_s, aes_on_s : std_logic; 
+  SIGNAL clock_s : STD_LOGIC := '0';
+  SIGNAL data_i_s, data_o_s : type_state;
 
-  signal clock_s : std_logic := '0'; 
-  signal data_i_s, data_o_s : type_state; 
+BEGIN
+  DUT : AES
+  PORT MAP
+  (
+    start_i => start_s,
+    clock_i => clock_s,
+    reset_i => reset_s,
+    data_i => data_i_s,
+    aes_on_o => aes_on_s,
+    data_o => data_o_s
+  );
 
-  begin 
-    DUT : AES 
-      port map 
-      (
-        start_i => start_s,
-        clock_i => clock_s,
-        reset_i => reset_s,
-        data_i => data_i_s,
-        aes_on_o => aes_on_s,
-        data_o => data_o_s
-      );
+  start_s <= '0', '1' AFTER 30 ns;
+  clock_s <= NOT clock_s AFTER 10 ns;
+  reset_s <= '0';
+  data_i_s <= (
+    (x"8c", x"06", x"de", x"aa"),
+    (x"11", x"ad", x"ca", x"03"),
+    (x"35", x"44", x"ec", x"43"),
+    (x"44", x"88", x"83", x"06"));
 
-    start_s <= '0', '1' after 30 ns;
-    clock_s <= not clock_s after 10 ns;
-    reset_s <= '0';
-    data_i_s <= (
-    (x"8c",x"06",x"de",x"aa"),
-    (x"11",x"ad",x"ca",x"03"),
-    (x"35",x"44",x"ec",x"43"),
-    (x"44",x"88",x"83",x"06"));
-
-end architecture AES_tb_arch; 
+END ARCHITECTURE AES_tb_arch;

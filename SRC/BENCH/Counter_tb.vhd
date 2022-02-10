@@ -1,60 +1,59 @@
-library IEEE; 
-use IEEE.std_logic_1164.all; 
-use IEEE.numeric_std.all;
-library lib_rtl;
-library lib_aes;
-use lib_aes.state_definition_package.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+LIBRARY lib_rtl;
+LIBRARY lib_aes;
+USE lib_aes.state_definition_package.ALL;
 -- library source;
 -- use source.all;
 
-entity Counter_tb is
-end entity Counter_tb;
+ENTITY Counter_tb IS
+END ENTITY Counter_tb;
 
-architecture Counter_tb_arch of Counter_tb is
-  component Counter
-    port(reset_i  : in  std_logic;
-         enable_i : in  std_logic;
-         clock_i  : in  std_logic;
-         count_o  : out bit4);
-  end component;
-  signal reset_s  : std_logic;
-  signal enable_s : std_logic;
-  signal clock_s  : std_logic;
-  signal count_s  : bit4;
-begin
+ARCHITECTURE Counter_tb_arch OF Counter_tb IS
+  COMPONENT Counter
+    PORT (
+      reset_i : IN STD_LOGIC;
+      enable_i : IN STD_LOGIC;
+      clock_i : IN STD_LOGIC;
+      count_o : OUT bit4);
+  END COMPONENT;
+  SIGNAL reset_s : STD_LOGIC;
+  SIGNAL enable_s : STD_LOGIC;
+  SIGNAL clock_s : STD_LOGIC;
+  SIGNAL count_s : bit4;
+BEGIN
   DUT : Counter
-    port map (
-      reset_i  => reset_s,
-      enable_i => enable_s,
-      clock_i  => clock_s,
-      count_o  => count_s);
+  PORT MAP(
+    reset_i => reset_s,
+    enable_i => enable_s,
+    clock_i => clock_s,
+    count_o => count_s);
 
-  P0 : process
-  begin
+  P0 : PROCESS
+  BEGIN
     reset_s <= '0';
-    wait for 10 ns;
+    WAIT FOR 10 ns;
     reset_s <= '1';
-    wait;
-  end process P0;
+    WAIT;
+  END PROCESS P0;
 
-  P1 : process
-  begin
+  P1 : PROCESS
+  BEGIN
     enable_s <= '0';
-    wait for 20 ns;
+    WAIT FOR 20 ns;
     enable_s <= '1';
-    wait for 194 ns;
+    WAIT FOR 194 ns;
     enable_s <= '0';
-    wait;
-  end process P1;
+    WAIT;
+  END PROCESS P1;
 
-  P2 : process
-  begin
+  P2 : PROCESS
+  BEGIN
     clock_s <= '0';
-    wait for 7 ns;
+    WAIT FOR 7 ns;
     clock_s <= '1';
-    wait for 7 ns;
-  end process P2;
+    WAIT FOR 7 ns;
+  END PROCESS P2;
 
-end architecture Counter_tb_arch;
-
-
+END ARCHITECTURE Counter_tb_arch;

@@ -1,139 +1,149 @@
-library IEEE; 
-use IEEE.std_logic_1164.all; 
-use IEEE.numeric_std.all;
-library lib_rtl;
-library lib_aes;
-use lib_aes.state_definition_package.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+LIBRARY lib_rtl;
+LIBRARY lib_aes;
+USE lib_aes.state_definition_package.ALL;
 
-entity AES is 
-port ( 
-    start_i : in std_logic; 
-    clock_i : in std_logic;
-    reset_i : in std_logic;
-    data_i : in type_state; 
-    aes_on_o : out std_logic; 
-    data_o : out type_state
-    ); 
-
-end entity AES; 
-
-
-
-architecture AES_arch of AES is 
-
-    component Counter is 
-    port(
-        resetb_i : in  std_logic;
-        enable_i : in  std_logic;
-        clock_i  : in  std_logic;
-        count_o  : out bit4
-        );
-    end component Counter;
-
-    component FSM_AES is 
-    port (
-        clock_i: in std_logic;
-        resetb_i : in std_logic;
-        round_i : in bit4;
-        start_i : in std_logic;
-        done_o,enableCounter_o,enableMixColumn_o,
-        enableOutput_o,firstRound_o,getciphertext_o,
-        resetCounter_o : out std_logic
-    ); 
-    end component FSM_AES; 
-
-    component KeyExpansion_table is
-    port (
-        round_i         : in  bit4;
-        expansion_key_o : out type_key
-    );
-    end component KeyExpansion_table;
-
-    component AES_Round is 
-    port ( 
+ENTITY AES IS
+    PORT (
+        start_i : IN STD_LOGIC;
         clock_i : IN STD_LOGIC;
-        currentKey_i : IN type_key;
-        currentText_i : IN type_state;
-        enableInvMixColumns_i : IN STD_LOGIC;
-        firstRound_i : IN STD_LOGIC;
-        data_o : OUT type_state;
-        inter_ShiftRows_SubBytes : OUT type_state;
-        inter_SubBytes_AddRoundKey : OUT type_state;
-        inter_AddRoundKey_MixColumns : OUT type_state
-        ); 
-    end component AES_Round; 
+        reset_i : IN STD_LOGIC;
+        data_i : IN type_state;
+        aes_on_o : OUT STD_LOGIC;
+        data_o : OUT type_state
+    );
 
-    component MUX is 
-port (
-  I0 : in type_state; 
-  I1 : in type_state; 
-  S  : in std_logic; 
-  O : out type_state); 
-end component MUX; 
-signal Counter_s : bit4; 
-signal done_s,enableCounter_s,enableMixColumn_s,enableOutput_s,
-firstRound_s,getciphertext_s,resetCounter_s : std_logic; 
-signal ExpansionKey_s : type_key; 
-signal data_o_s : type_state;
-signal currentText_s : type_state; 
-signal state_s : type_state; 
+END ENTITY AES;
 
-begin
+ARCHITECTURE AES_arch OF AES IS
 
-    Compteur : Counter 
-        port map (
-            clock_i => clock_i,
-            enable_i => enableCounter_s,
-            resetb_i => resetCounter_s,
-            count_o => Counter_s
+    COMPONENT Counter IS
+        PORT (
+            resetb_i : IN STD_LOGIC;
+            enable_i : IN STD_LOGIC;
+            clock_i : IN STD_LOGIC;
+            count_o : OUT bit4
         );
+    END COMPONENT Counter;
+
+    COMPONENT FSM_AES IS
+        PORT (
+            clock_i : IN STD_LOGIC;
+            resetb_i : IN STD_LOGIC;
+            round_i : IN bit4;
+            start_i : IN STD_LOGIC;
+            done_o, enableCounter_o, enableMixColumn_o,
+            enableOutput_o, firstRound_o, getciphertext_o,
+            resetCounter_o, idle_o : OUT STD_LOGIC
+        );
+    END COMPONENT FSM_AES;
+
+    COMPONENT KeyExpansion_table IS
+        PORT (
+            round_i : IN bit4;
+            expansion_key_o : OUT type_key
+        );
+    END COMPONENT KeyExpansion_table;
+
+    COMPONENT AES_Round IS
+        PORT (
+            clock_i : IN STD_LOGIC;
+            currentKey_i : IN type_key;
+            currentText_i : IN type_state;
+            enableInvMixColumns_i : IN STD_LOGIC;
+            firstRound_i : IN STD_LOGIC;
+            idle_i : IN STD_LOGIC;
+            data_o : OUT type_state;
+            inter_ShiftRows_SubBytes : OUT type_state;
+            inter_SubBytes_AddRoundKey : OUT type_state;
+            inter_AddRoundKey_MixColumns : OUT type_state
+        );
+    END COMPONENT AES_Round;
+
+    COMPONENT MUX IS
+        PORT (
+            I0_in : IN type_state;
+            I1_in : IN type_state;
+            S_in : IN STD_LOGIC;
+            O_out : OUT type_state);
+    END COMPONENT MUX;
+    SIGNAL Counter_s : bit4;
+    SIGNAL done_s, enableCounter_s, enableMixColumn_s, enableOutput_s,
+    firstRound_s, getciphertext_s, resetCounter_s : STD_LOGIC;
+    SIGNAL ExpansionKey_s : type_key;
+    SIGNAL data_o_s : type_state;
+    SIGNAL currentText_s, currentText_Temp_s : type_state;
+    SIGNAL state_s : type_state;
+    SIGNAL idle_s : STD_LOGIC;
+    SIGNAL bool_s : STD_LOGIC;
+BEGIN
+    bool_s <= '0';
+
+    Compteur : Counter
+    PORT MAP(
+        clock_i => clock_i,
+        enable_i => enableCounter_s,
+        resetb_i => resetCounter_s,
+        count_o => Counter_s
+    );
 
     FSM : FSM_AES
-        port map (
-            clock_i => clock_i,
-            resetb_i => reset_i,
-            round_i => Counter_s,
-            start_i => start_i,
-            done_o => aes_on_o,
-            enableCounter_o => enableCounter_s,
-            enableMixColumn_o => enableMixColumn_s,
-            enableOutput_o => enableOutput_s,
-            firstRound_o => firstRound_s,
-            getciphertext_o => getciphertext_s,
-            resetCounter_o => resetCounter_s
-        );
+    PORT MAP(
+        clock_i => clock_i,
+        resetb_i => reset_i,
+        round_i => Counter_s,
+        start_i => start_i,
+        done_o => aes_on_o,
+        enableCounter_o => enableCounter_s,
+        enableMixColumn_o => enableMixColumn_s,
+        enableOutput_o => enableOutput_s,
+        firstRound_o => firstRound_s,
+        getciphertext_o => getciphertext_s,
+        resetCounter_o => resetCounter_s,
+        idle_o => idle_s
+    );
 
     KEY : KeyExpansion_table
-        port map (
-            round_i => Counter_s,
-            expansion_key_o => ExpansionKey_s
-        );
+    PORT MAP(
+        round_i => Counter_s,
+        expansion_key_o => ExpansionKey_s
+    );
 
     AESROUND : AES_Round
-        port map (
-            clock_i => clock_i,
-            currentKey_i => ExpansionKey_s,
-            currentText_i => currentText_s,
-            enableInvMixColumns_i => enableMixColumn_s,
-            firstRound_i => firstRound_s,
-            data_o => data_o_s
-        );
+    PORT MAP(
+        clock_i => clock_i,
+        currentKey_i => ExpansionKey_s,
+        currentText_i => currentText_s,
+        enableInvMixColumns_i => enableMixColumn_s,
+        firstRound_i => firstRound_s,
+        data_o => data_o_s,
+        idle_i => idle_s
+    );
 
-    MULTIPLEXEUR : MUX 
-        port map (
-            I0 => data_i,
-            I1 => data_o_s,
-            S => getciphertext_s,
-            O => currentText_s
-        );
-
-    seq_0 : process (clock_i, reset_i) is
-    begin -- process seq_0
-    if reset_i = '1' then -- asynchronous reset (active-low)
-        state_s <= ((others => (others => (others => '0'))));
-    -- or use 2 x for ... generate
-    elsif clock_i'event and clock_i = '1' and enableOutput_s = '1' then -- rising clock
-        state_s <= data_o_s;
-    end if;
-    end process seq_0;
-end AES_arch; 
+    MULTIPLEXEUR : MUX
+    PORT MAP(
+        I0_in => data_i,
+        I1_in => data_o_s,
+        S_in => getciphertext_s,
+        O_out => currentText_Temp_s
+    );
+    seq_0 : PROCESS (clock_i, reset_i) IS
+    BEGIN -- process seq_0
+        IF reset_i = '1' THEN -- asynchronous reset (active-low)
+            state_s <= ((OTHERS => (OTHERS => (OTHERS => '0'))));
+            -- or use 2 x for ... generate
+        ELSE
+            IF clock_i'event AND clock_i = '1' THEN
+                bool_s <= NOT bool_s;
+                IF enableOutput_s = '1' THEN -- rising clock
+                    state_s <= data_o_s;
+                END IF;
+                IF bool_s = '0' THEN
+                    currentText_s <= currentText_Temp_s;
+                END IF;
+            END IF;
+        END IF;
+    END PROCESS seq_0;
+END AES_arch;
