@@ -73,13 +73,14 @@ ARCHITECTURE AES_arch OF AES IS
     SIGNAL done_s, enableCounter_s, enableMixColumn_s, enableOutput_s,
     firstRound_s, getciphertext_s, resetCounter_s : STD_LOGIC;
     SIGNAL ExpansionKey_s : type_key;
+    SIGNAL ExpansionKey_Temp_s : type_key;
     SIGNAL data_o_s : type_state;
-    SIGNAL currentText_s, currentText_Temp_s : type_state;
+    SIGNAL currentText_s : type_state;
+    SIGNAL currentText_Temp_s : type_state;
     SIGNAL state_s : type_state;
     SIGNAL idle_s : STD_LOGIC;
-    SIGNAL bool_s : STD_LOGIC;
+    SIGNAL bool_s : STD_LOGIC:='0';
 BEGIN
-    bool_s <= '0';
 
     Compteur : Counter
     PORT MAP(
@@ -108,7 +109,7 @@ BEGIN
     KEY : KeyExpansion_table
     PORT MAP(
         round_i => Counter_s,
-        expansion_key_o => ExpansionKey_s
+        expansion_key_o => ExpansionKey_Temp_s
     );
 
     AESROUND : AES_Round
@@ -140,9 +141,8 @@ BEGIN
                 IF enableOutput_s = '1' THEN -- rising clock
                     state_s <= data_o_s;
                 END IF;
-                IF bool_s = '0' THEN
                     currentText_s <= currentText_Temp_s;
-                END IF;
+                    ExpansionKey_s <= ExpansionKey_Temp_s;
             END IF;
         END IF;
     END PROCESS seq_0;

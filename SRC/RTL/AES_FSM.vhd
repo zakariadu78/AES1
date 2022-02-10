@@ -12,15 +12,16 @@ ENTITY FSM_AES IS
         start_i : IN STD_LOGIC;
         done_o, enableCounter_o, enableMixColumn_o,
         enableOutput_o, getciphertext_o,
-        resetCounter_o, firstRound_o,idle_o : OUT STD_LOGIC
+        resetCounter_o, firstRound_o, idle_o : OUT STD_LOGIC
     );
 END FSM_AES;
 
 ARCHITECTURE FSM_AES_Arch OF FSM_AES IS
-    
+
     TYPE etat IS (idle, Round10, Round9_1, Round0, fin);
     SIGNAL etatPresent, etatFutur : etat;
     -- Description des transtions des états
+    SIGNAL bool_s : STD_LOGIC := '0';
 
 BEGIN
 
@@ -29,7 +30,10 @@ BEGIN
         IF (resetb_i = '1') THEN
             etatPresent <= Round10;
         ELSIF (clock_i'event AND clock_i = '1') THEN
-            etatPresent <= etatFutur;
+            bool_s <= NOT bool_s;
+            IF bool_s = '0' THEN
+                etatPresent <= etatFutur;
+            END IF;
         END IF;
     END PROCESS;
 
@@ -88,7 +92,7 @@ BEGIN
                 enableOutput_o <= '0';
                 enableMixColumn_o <= '0';
                 firstRound_o <= '1';
-                getciphertext_o <= '1';
+                getciphertext_o <= '0';
                 resetCounter_o <= '0';
                 idle_o <= '0';
             WHEN Round9_1 =>
@@ -97,7 +101,7 @@ BEGIN
                 enableCounter_o <= '1';
                 enableOutput_o <= '0';
                 firstRound_o <= '0';
-                getciphertext_o <= '0';
+                getciphertext_o <= '1';
                 resetCounter_o <= '0';
                 idle_o <= '0';
             WHEN Round0 =>
@@ -106,7 +110,7 @@ BEGIN
                 enableCounter_o <= '0';
                 enableOutput_o <= '0';
                 firstRound_o <= '0';
-                getciphertext_o <= '0';
+                getciphertext_o <= '1';
                 resetCounter_o <= '0';
                 idle_o <= '0';
             WHEN fin =>
@@ -115,7 +119,7 @@ BEGIN
                 enableCounter_o <= '0';
                 enableOutput_o <= '1';
                 firstRound_o <= '0';
-                getciphertext_o <= '0';
+                getciphertext_o <= '1';
                 resetCounter_o <= '0';
                 idle_o <= '0';
         END CASE;
