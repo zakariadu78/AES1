@@ -7,7 +7,7 @@ USE lib_aes.state_definition_package.ALL;
 ENTITY FSM_AES IS
     PORT (
         clock_i : IN STD_LOGIC;
-        resetb_i : IN STD_LOGIC;
+        reset_i : IN STD_LOGIC;
         round_i : IN bit4;
         start_i : IN STD_LOGIC;
         done_o, enableCounter_o, enableMixColumn_o,
@@ -21,23 +21,21 @@ ARCHITECTURE FSM_AES_Arch OF FSM_AES IS
     TYPE etat IS (idle, Round10, Round9_1, Round0, fin);
     SIGNAL etatPresent, etatFutur : etat;
     -- Description des transtions des états
-    SIGNAL bool_s : STD_LOGIC := '0';
 
 BEGIN
 
-    init : PROCESS (clock_i, resetb_i)
+    init : PROCESS (clock_i, reset_i)
     BEGIN
-        IF (resetb_i = '1') THEN
-            etatPresent <= Round10;
+        IF (reset_i = '1') THEN
+            etatPresent <= idle;
         ELSIF (clock_i'event AND clock_i = '1') THEN
-            bool_s <= NOT bool_s;
-            IF bool_s = '0' THEN
-                etatPresent <= etatFutur;
-            END IF;
+            etatPresent <= etatFutur;
+        ELSE
+            etatPresent <= etatPresent;
         END IF;
     END PROCESS;
 
-    etats : PROCESS (etatPresent, round_i, start_i)
+    etats : PROCESS (etatPresent, round_i, start_i, clock_i)
     BEGIN
         CASE etatPresent IS
             WHEN idle =>
@@ -47,28 +45,20 @@ BEGIN
                     etatFutur <= etatPresent;
                 END IF;
             WHEN Round10 =>
-                IF (round_i < "1010" AND round_i > "0001") THEN
-                    etatFutur <= Round9_1;
-                ELSE
-                    etatFutur <= etatPresent;
-                END IF;
+                etatFutur <= Round9_1;
             WHEN Round9_1 =>
                 IF (round_i = "0001") THEN
                     etatFutur <= Round0;
-                ELSE
-                    etatFutur <= etatPresent;
                 END IF;
             WHEN Round0 =>
                 IF (round_i = "0000") THEN
                     etatFutur <= fin;
-                ELSE
-                    etatFutur <= etatPresent;
+
                 END IF;
             WHEN fin =>
                 IF (start_i = '0') THEN
                     etatFutur <= idle;
-                ELSE
-                    etatFutur <= etatPresent;
+
                 END IF;
         END CASE;
     END PROCESS;

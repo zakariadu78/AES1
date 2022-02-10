@@ -1,132 +1,6 @@
-vsim lib_bench.aes_round_tb_conf
-# vsim lib_bench.aes_round_tb_conf 
-# Start time: 12:33:00 on Feb 09,2022
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_round_tb_conf
-# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-add wave -position insertpoint  \
-sim:/aes_round_tb/clock_s \
-sim:/aes_round_tb/currentKey_s \
-sim:/aes_round_tb/currentText_s \
-sim:/aes_round_tb/data_o_s \
-sim:/aes_round_tb/enableInvMixColumns_s \
-sim:/aes_round_tb/firstRound_s \
-sim:/aes_round_tb/Reset_s \
-sim:/aes_round_tb/signal_inter_AddRoundKey_MixColumns \
-sim:/aes_round_tb/signal_inter_ShiftRows_SubBytes \
-sim:/aes_round_tb/signal_inter_SubBytes_AddRoundKey
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: zakaria  Hostname: DESKTOP-5EI9G35  ProcessID: 8112
-#           Attempting to use alternate WLF file "./wlftrs5kve".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftrs5kve
-radix h 
-# hexadecimal
-run 800 ns
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-radix h 
-# hexadecimal
-add wave -position insertpoint  \
-sim:/aes_round_tb/clock_s \
-sim:/aes_round_tb/currentKey_s \
-sim:/aes_round_tb/currentText_s \
-sim:/aes_round_tb/data_o_s \
-sim:/aes_round_tb/enableInvMixColumns_s \
-sim:/aes_round_tb/firstRound_s \
-sim:/aes_round_tb/Reset_s \
-sim:/aes_round_tb/signal_inter_AddRoundKey_MixColumns \
-sim:/aes_round_tb/signal_inter_ShiftRows_SubBytes \
-sim:/aes_round_tb/signal_inter_SubBytes_AddRoundKey
-run 800 ns
-restart -f
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_round_tb_conf
-# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-run 800 ns
-restart -f
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_round_tb_conf
-# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-radix h
-# hexadecimal
- run 800 ns
-restart -f
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_round_tb_conf
-# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-radix h
-# hexadecimal
-run 800 ns
-restart -f
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_round_tb_conf
-# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-radix h 
-# hexadecimal
-run 800 ns
-restart -f
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_round_tb_conf
-# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-radix h 
-# hexadecimal
-run 800 ns
-restart -f
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_round_tb_conf
-# Loading lib_bench.aes_round_tb(aes_round_tb_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
 vsim lib_bench.aes_tb
-# End time: 17:11:46 on Feb 09,2022, Elapsed time: 4:38:46
-# Errors: 0, Warnings: 0
 # vsim lib_bench.aes_tb 
-# Start time: 17:11:46 on Feb 09,2022
+# Start time: 13:17:05 on Feb 10,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -134,35 +8,19 @@ vsim lib_bench.aes_tb
 # Loading lib_aes.state_definition_package(body)
 # Loading lib_bench.aes_tb(aes_tb_arch)
 # Loading lib_rtl.aes(aes_arch)
-# ** Error: (vsim-13) Recompile lib_rtl.counter because lib_aes.state_definition_package has changed.
-# ** Error (suppressible): (vsim-12) Recompile lib_rtl.counter(counter_arch) after lib_rtl.counter is recompiled.
-# ** Error: (vsim-13) Recompile lib_rtl.counter(counter_arch) because lib_aes.state_definition_package has changed.
-# Load interrupted
+# Loading lib_rtl.counter(counter_arch)
+# Loading lib_rtl.fsm_aes(fsm_aes_arch)
+# ** Fatal: (vsim-3817) Port "reset_i" of entity "fsm_aes" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/FSM File: ./SRC/RTL/AES_FSM.vhd Line: 10
+# FATAL ERROR while loading design
 # Error loading design
-# End time: 17:11:46 on Feb 09,2022, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-vsim lib_bench.aes_tb
-# vsim lib_bench.aes_tb 
-# Start time: 17:13:24 on Feb 09,2022
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_tb(aes_tb_arch)
-# Loading lib_rtl.aes(aes_arch)
-# ** Error: (vsim-13) Recompile lib_rtl.counter because lib_aes.state_definition_package has changed.
-# ** Error (suppressible): (vsim-12) Recompile lib_rtl.counter(counter_arch) after lib_rtl.counter is recompiled.
-# ** Error: (vsim-13) Recompile lib_rtl.counter(counter_arch) because lib_aes.state_definition_package has changed.
-# Load interrupted
-# Error loading design
-# End time: 17:13:24 on Feb 09,2022, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
+# End time: 13:17:06 on Feb 10,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
 restart -f
 # No Design Loaded!
 vsim lib_bench.aes_tb
 # vsim lib_bench.aes_tb 
-# Start time: 17:14:29 on Feb 09,2022
+# Start time: 13:19:27 on Feb 10,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -212,6 +70,169 @@ vsim lib_bench.aes_tb
 # This port will contribute value (UUUUUUUU) to the signal network.
 # ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
 # This port will contribute value (UUUUUUUU) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/aes_tb/DUT/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: zakaria  Hostname: DESKTOP-5EI9G35  ProcessID: 8112
+#           Attempting to use alternate WLF file "./wlftn9r9xt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftn9r9xt
+add wave -position insertpoint sim:/aes_tb/DUT/FSM/*
+add wave -position insertpoint sim:/aes_tb/DUT/AESROUND/*
+radix h
+# hexadecimal
+run 350 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_tb(aes_tb_arch)
+# Loading lib_rtl.aes(aes_arch)
+# Loading lib_rtl.counter(counter_arch)
+# Loading lib_rtl.fsm_aes(fsm_aes_arch)
+# Loading lib_rtl.keyexpansion_table(keyexpansion_table_arch)
+# Loading lib_rtl.aes_round(aes_round_arch)
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+# Loading lib_rtl.subbytes(subbytes_arch)
+# Loading lib_rtl.sbox_inv(sbox_inv_arch)
+# Loading lib_rtl.addroundkey(addroundkey_arch)
+# Loading lib_rtl.mixcolumn(mixcolumn_arch)
+# Loading lib_rtl.mux(mux_arch)
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+radix h
+# hexadecimal
+run 300 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_tb(aes_tb_arch)
+# Loading lib_rtl.aes(aes_arch)
+# Loading lib_rtl.counter(counter_arch)
+# Loading lib_rtl.fsm_aes(fsm_aes_arch)
+# Loading lib_rtl.keyexpansion_table(keyexpansion_table_arch)
+# Loading lib_rtl.aes_round(aes_round_arch)
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+# Loading lib_rtl.subbytes(subbytes_arch)
+# Loading lib_rtl.sbox_inv(sbox_inv_arch)
+# Loading lib_rtl.addroundkey(addroundkey_arch)
+# Loading lib_rtl.mixcolumn(mixcolumn_arch)
+# Loading lib_rtl.mux(mux_arch)
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+run 300 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading lib_aes.state_definition_package(body)
+# Loading lib_bench.aes_tb(aes_tb_arch)
+# Loading lib_rtl.aes(aes_arch)
+# Loading lib_rtl.counter(counter_arch)
+# Loading lib_rtl.fsm_aes(fsm_aes_arch)
+# Loading lib_rtl.keyexpansion_table(keyexpansion_table_arch)
+# Loading lib_rtl.aes_round(aes_round_arch)
+# Loading lib_rtl.shiftrows(shiftrows_arch)
+# Loading lib_rtl.subbytes(subbytes_arch)
+# Loading lib_rtl.sbox_inv(sbox_inv_arch)
+# Loading lib_rtl.addroundkey(addroundkey_arch)
+# Loading lib_rtl.mixcolumn(mixcolumn_arch)
+# Loading lib_rtl.mux(mux_arch)
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
+# This port will contribute value (XX) to the signal network.
 add wave -position insertpoint  \
 sim:/aes_tb/aes_on_s \
 sim:/aes_tb/clock_s \
@@ -219,248 +240,12 @@ sim:/aes_tb/data_i_s \
 sim:/aes_tb/data_o_s \
 sim:/aes_tb/reset_s \
 sim:/aes_tb/start_s
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: zakaria  Hostname: DESKTOP-5EI9G35  ProcessID: 8112
-#           Attempting to use alternate WLF file "./wlftds6zme".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftds6zme
-add wave -position end sim:/aes_tb/DUT/*
-radix h 
-# hexadecimal
-run 800 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-run 10 ms
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-radix hj
-# ** UI-Msg: (vish-4016) Invalid radix value: hj.
-# Usage: radix [-binary | -octal | -decimal | -hexadecimal | -unsigned | -ascii | -time] [-enumnumeric | -enumsymbolic | -showbase | -symbolic]
-radix h 
-# hexadecimal
-run 20 ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-run 10 ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-radix h
-# hexadecimal
- radix h 
-# hexadecimal
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_tb(aes_tb_arch)
-# Loading lib_rtl.aes(aes_arch)
-# Loading lib_rtl.counter(counter_arch)
-# Loading lib_rtl.fsm_aes(fsm_aes_arch)
-# Loading lib_rtl.keyexpansion_table(keyexpansion_table_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-# Loading lib_rtl.mux(mux_arch)
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-run 100 ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-run 100 ns
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-add wave -position insertpoint sim:/aes_tb/*
-add wave -position end sim:/aes_tb/DUT/*
-run 200 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-radix h 
-# hexadecimal
-run 100 ns
+add wave -position insertpoint sim:/aes_tb/DUT/*
 add wave -position insertpoint sim:/aes_tb/DUT/FSM/*
-add wave -position insertpoint sim:/aes_tb/DUT/KEY/*
 add wave -position insertpoint sim:/aes_tb/DUT/AESROUND/*
-add wave -position insertpoint sim:/aes_tb/DUT/MULTIPLEXEUR/*
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_tb(aes_tb_arch)
-# Loading lib_rtl.aes(aes_arch)
-# Loading lib_rtl.counter(counter_arch)
-# Loading lib_rtl.fsm_aes(fsm_aes_arch)
-# Loading lib_rtl.keyexpansion_table(keyexpansion_table_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-# Loading lib_rtl.mux(mux_arch)
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-radix h 
+radix h
 # hexadecimal
-run 1000 ns
+run 300 ns
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
 restart -f
@@ -510,14 +295,8 @@ restart -f
 # This port will contribute value (XX) to the signal network.
 # ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
 # This port will contribute value (XX) to the signal network.
-add wave -position insertpoint sim:/aes_tb/DUT/*
-radix h 
-# hexadecimal
-run 800 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-run 100 ns
-add wave -position insertpoint sim:/aes_tb/DUT/Compteur/*
+# Warning in wave window restart: (vish-4014) No objects found matching '/aes_tb/DUT/ExpansionKey_Temp_s'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/aes_tb/DUT/currentText_Temp_s'. 
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
@@ -554,7 +333,7 @@ restart -f
 # This port will contribute value (XX) to the signal network.
 radix h
 # hexadecimal
- run 200 ns
+run 300 ns
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
 restart -f
@@ -572,356 +351,11 @@ restart -f
 # Loading lib_rtl.addroundkey(addroundkey_arch)
 # Loading lib_rtl.mixcolumn(mixcolumn_arch)
 # Loading lib_rtl.mux(mux_arch)
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-run 100 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_tb(aes_tb_arch)
-# Loading lib_rtl.aes(aes_arch)
-# Loading lib_rtl.counter(counter_arch)
-# Loading lib_rtl.fsm_aes(fsm_aes_arch)
-# Loading lib_rtl.keyexpansion_table(keyexpansion_table_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-# Loading lib_rtl.mux(mux_arch)
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-radix h
-# hexadecimal
-add wave -position insertpoint sim:/aes_tb/DUT/*
- run 500 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-add wave -position end sim:/aes_tb/DUT/Compteur/*
-add wave -position insertpoint sim:/aes_tb/DUT/FSM/*
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
+# Loading lib_rtl.statetobit128(statetobit128_arch)
+radix 
+# The default radix is hexadecimal.
 radix h 
 # hexadecimal
-run 800 ns
+run 300 ns
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_tb(aes_tb_arch)
-# Loading lib_rtl.aes(aes_arch)
-# Loading lib_rtl.counter(counter_arch)
-# Loading lib_rtl.fsm_aes(fsm_aes_arch)
-# Loading lib_rtl.keyexpansion_table(keyexpansion_table_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-# Loading lib_rtl.mux(mux_arch)
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-add wave -position insertpoint sim:/aes_tb/DUT/*
-add wave -position insertpoint sim:/aes_tb/DUT/FSM/*
-add wave -position insertpoint sim:/aes_tb/DUT/KEY/*
-add wave -position insertpoint sim:/aes_tb/DUT/AESROUND/*
-add wave -position insertpoint sim:/aes_tb/DUT/MULTIPLEXEUR/*
-radix h
-# hexadecimal
-run 800 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-add wave -position end sim:/aes_tb/DUT/*
-add wave -position insertpoint sim:/aes_tb/DUT/FSM/*
-add wave -position insertpoint sim:/aes_tb/DUT/KEY/*
-add wave -position insertpoint sim:/aes_tb/DUT/*
-add wave -position insertpoint sim:/aes_tb/DUT/Compteur/*
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_tb(aes_tb_arch)
-# Loading lib_rtl.aes(aes_arch)
-# Loading lib_rtl.counter(counter_arch)
-# Loading lib_rtl.fsm_aes(fsm_aes_arch)
-# Loading lib_rtl.keyexpansion_table(keyexpansion_table_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-# Loading lib_rtl.mux(mux_arch)
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-add wave -position insertpoint sim:/aes_tb/DUT/*
-add wave -position insertpoint sim:/aes_tb/DUT/Compteur/*
-radix h 
-# hexadecimal
-run 800 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-# Can't move the Now cursor.
-add wave -position insertpoint sim:/aes_tb/DUT/FSM/*
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_tb(aes_tb_arch)
-# Loading lib_rtl.aes(aes_arch)
-# Loading lib_rtl.counter(counter_arch)
-# Loading lib_rtl.fsm_aes(fsm_aes_arch)
-# Loading lib_rtl.keyexpansion_table(keyexpansion_table_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-# Loading lib_rtl.mux(mux_arch)
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-radix h
-# hexadecimal
-add wave -position insertpoint sim:/aes_tb/*
-add wave -position insertpoint sim:/aes_tb/DUT/*
-add wave -position insertpoint sim:/aes_tb/DUT/Compteur/*
-add wave -position insertpoint sim:/aes_tb/DUT/FSM/*
-run 800 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /aes_tb/DUT/KEY
-add wave -position insertpoint sim:/aes_tb/DUT/*
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading lib_aes.state_definition_package(body)
-# Loading lib_bench.aes_tb(aes_tb_arch)
-# Loading lib_rtl.aes(aes_arch)
-# Loading lib_rtl.counter(counter_arch)
-# Loading lib_rtl.fsm_aes(fsm_aes_arch)
-# Loading lib_rtl.keyexpansion_table(keyexpansion_table_arch)
-# Loading lib_rtl.aes_round(aes_round_arch)
-# Loading lib_rtl.shiftrows(shiftrows_arch)
-# Loading lib_rtl.subbytes(subbytes_arch)
-# Loading lib_rtl.sbox_inv(sbox_inv_arch)
-# Loading lib_rtl.addroundkey(addroundkey_arch)
-# Loading lib_rtl.mixcolumn(mixcolumn_arch)
-# Loading lib_rtl.mux(mux_arch)
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(0)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(1)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(2)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(0)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(1)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(2)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /aes_tb/DUT/data_o(3)(3)(7 downto 0) has no driver.
-# This port will contribute value (XX) to the signal network.
-add wave -position insertpoint sim:/aes_tb/DUT/*
-add wave -position insertpoint sim:/aes_tb/*

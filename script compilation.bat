@@ -22,6 +22,7 @@ C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work lib_rtl ./SRC/RTL/MUX.vhd
 C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work lib_rtl ./SRC/RTL/Counter.vhd
 C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work lib_rtl ./SRC/RTL/AES_Round.vhd
 C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work lib_rtl ./SRC/RTL/AES_FSM.vhd
+C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work lib_rtl ./SRC/RTL/stateToBit128.vhd
 C:\intelFPGA\20.1\modelsim_ase\win32aloem\vcom -work lib_rtl ./SRC/RTL/AES.vhd
 
 
