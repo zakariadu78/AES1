@@ -22,8 +22,8 @@ BEGIN
     IF (reset_i = '1') THEN
       counter_s <= 10;
     ELSIF (clock_i'event AND clock_i = '1') THEN
-        IF (enable_i = '1') THEN
-          counter_s <= counter_s - 1;
+      IF (enable_i = '1') THEN
+        counter_s <= counter_s - 1;
       END IF;
     END IF;
   END PROCESS P0;

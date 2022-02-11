@@ -4,7 +4,7 @@ USE IEEE.numeric_std.ALL;
 LIBRARY lib_rtl;
 LIBRARY lib_aes;
 USE lib_aes.state_definition_package.ALL;
-ENTITY FSM_AES IS
+ENTITY FSM_AES_MOORE IS
     PORT (
         clock_i : IN STD_LOGIC;
         reset_i : IN STD_LOGIC;
@@ -14,9 +14,9 @@ ENTITY FSM_AES IS
         enableOutput_o, getciphertext_o,
         resetCounter_o, firstRound_o, idle_o : OUT STD_LOGIC
     );
-END FSM_AES;
+END FSM_AES_MOORE;
 
-ARCHITECTURE FSM_AES_Arch OF FSM_AES IS
+ARCHITECTURE FSM_AES_MOORE_Arch OF FSM_AES_MOORE IS
 
     TYPE etat IS (idle, Round10, Round9_1, Round0, fin);
     SIGNAL etatPresent, etatFutur : etat;
@@ -114,4 +114,4 @@ BEGIN
                 idle_o <= '0';
         END CASE;
     END PROCESS;
-END FSM_AES_Arch;
+END FSM_AES_MOORE_Arch;

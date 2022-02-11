@@ -13,9 +13,6 @@ ENTITY AES_Round IS
     enableInvMixColumns_i : IN STD_LOGIC;
     firstRound_i : IN STD_LOGIC;
     data_o : OUT type_state;
-    inter_ShiftRows_SubBytes : OUT type_state;
-    inter_SubBytes_AddRoundKey : OUT type_state;
-    inter_AddRoundKey_MixColumns : OUT type_state;
     idle_i : IN STD_LOGIC
   );
 
@@ -50,39 +47,33 @@ ARCHITECTURE AES_Round_arch OF AES_Round IS
       enablemc_i : IN STD_LOGIC);
   END COMPONENT;
 
-  SIGNAL signal_inter_ShiftRows_SubBytes : type_state;
-  SIGNAL signal_inter_SubBytes_AddRoundKey : type_state;
-  SIGNAL signal_inter_SubBytes_AddRoundKey_temp : type_state;
-  SIGNAL signal_inter_AddRoundKey_MixColumns : type_state;
+  SIGNAL inter_ShiftRows_SubBytes_s : type_state;
+  SIGNAL inter_SubBytes_AddRoundKey_s : type_state;
+  SIGNAL inter_SubBytes_AddRoundKey_temp_s : type_state;
+  SIGNAL inter_AddRoundKey_MixColumns_s : type_state;
   SIGNAL data_o_s : type_state;
   SIGNAL data_idle_o_s : type_state;
 BEGIN
 
   SHIFT : ShiftRows PORT MAP(
     data_i => currentText_i,
-    data_o => signal_inter_ShiftRows_SubBytes);
-
-  inter_ShiftRows_SubBytes <= signal_inter_ShiftRows_SubBytes;
+    data_o => inter_ShiftRows_SubBytes_s);
 
   SUB : SubBytes PORT MAP(
-    data_i => signal_inter_ShiftRows_SubBytes,
-    data_o => signal_inter_SubBytes_AddRoundKey);
+    data_i => inter_ShiftRows_SubBytes_s,
+    data_o => inter_SubBytes_AddRoundKey_s);
 
-    signal_inter_SubBytes_AddRoundKey_temp <= signal_inter_SubBytes_AddRoundKey WHEN (firstRound_i = '0' AND idle_i = '0') ELSE currentText_i;
-    inter_SubBytes_AddRoundKey <= signal_inter_SubBytes_AddRoundKey;
-
-
+  inter_SubBytes_AddRoundKey_temp_s <= inter_SubBytes_AddRoundKey_s WHEN (firstRound_i = '0' AND idle_i = '0') ELSE
+    currentText_i;
   ADD : AddRoundKey PORT MAP(
-    Data_i => signal_inter_SubBytes_AddRoundKey_temp,
+    Data_i => inter_SubBytes_AddRoundKey_temp_s,
     Key_i => currentKey_i,
-    Data_o => signal_inter_AddRoundKey_MixColumns);
+    Data_o => inter_AddRoundKey_MixColumns_s);
 
-  inter_AddRoundKey_MixColumns <= signal_inter_AddRoundKey_MixColumns;
   MIX : MixColumn PORT MAP(
-    data_i => signal_inter_AddRoundKey_MixColumns,
+    data_i => inter_AddRoundKey_MixColumns_s,
     data_o => data_o_s,
     enablemc_i => enableInvMixColumns_i);
-  inter_AddRoundKey_MixColumns <= signal_inter_AddRoundKey_MixColumns;
 
   data_idle_o_s <= data_o_s WHEN idle_i = '0' ELSE
     currentText_i;
@@ -90,9 +81,9 @@ BEGIN
   BEGIN
     IF clock_i'event AND clock_i = '1' THEN
       IF firstRound_i = '0' THEN
-      data_o <= data_idle_o_s;
+        data_o <= data_idle_o_s;
       ELSE
-      data_o <= signal_inter_AddRoundKey_MixColumns;
+        data_o <= inter_AddRoundKey_MixColumns_s;
       END IF;
     END IF;
   END PROCESS seq;

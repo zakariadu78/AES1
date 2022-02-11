@@ -28,7 +28,7 @@ ARCHITECTURE AES_arch OF AES IS
         );
     END COMPONENT Counter;
 
-    COMPONENT FSM_AES IS
+    COMPONENT FSM_AES_MOORE IS
         PORT (
             clock_i : IN STD_LOGIC;
             reset_i : IN STD_LOGIC;
@@ -38,7 +38,7 @@ ARCHITECTURE AES_arch OF AES IS
             enableOutput_o, firstRound_o, getciphertext_o,
             resetCounter_o, idle_o : OUT STD_LOGIC
         );
-    END COMPONENT FSM_AES;
+    END COMPONENT FSM_AES_MOORE;
 
     COMPONENT KeyExpansion_table IS
         PORT (
@@ -55,19 +55,16 @@ ARCHITECTURE AES_arch OF AES IS
             enableInvMixColumns_i : IN STD_LOGIC;
             firstRound_i : IN STD_LOGIC;
             idle_i : IN STD_LOGIC;
-            data_o : OUT type_state;
-            inter_ShiftRows_SubBytes : OUT type_state;
-            inter_SubBytes_AddRoundKey : OUT type_state;
-            inter_AddRoundKey_MixColumns : OUT type_state
+            data_o : OUT type_state
         );
     END COMPONENT AES_Round;
 
     COMPONENT MUX IS
         PORT (
-            I0_in : IN type_state;
-            I1_in : IN type_state;
-            S_in : IN STD_LOGIC;
-            O_out : OUT type_state);
+            I0_i : IN type_state;
+            I1_i : IN type_state;
+            S_i : IN STD_LOGIC;
+            O_o : OUT type_state);
     END COMPONENT MUX;
 
     COMPONENT stateToBit128 IS
@@ -95,7 +92,7 @@ BEGIN
         count_o => Counter_s
     );
 
-    FSM : FSM_AES
+    FSM : FSM_AES_MOORE
     PORT MAP(
         clock_i => clock_i,
         reset_i => reset_i,
@@ -130,10 +127,10 @@ BEGIN
 
     MULTIPLEXEUR : MUX
     PORT MAP(
-        I0_in => data_i,
-        I1_in => data_o_s,
-        S_in => getciphertext_s,
-        O_out => currentText_s
+        I0_i => data_i,
+        I1_i => data_o_s,
+        S_i => getciphertext_s,
+        O_o => currentText_s
     );
     seq_0 : PROCESS (clock_i, reset_i) IS
     BEGIN -- process seq_0

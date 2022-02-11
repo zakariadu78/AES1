@@ -17,9 +17,6 @@ ARCHITECTURE AES_Round_tb_arch OF AES_Round_tb IS
       enableInvMixColumns_i : IN STD_LOGIC;
       firstRound_i : IN STD_LOGIC;
       data_o : OUT type_state;
-      inter_ShiftRows_SubBytes : OUT type_state;
-      inter_SubBytes_AddRoundKey : OUT type_state;
-      inter_AddRoundKey_MixColumns : OUT type_state;
       idle_i : IN STD_LOGIC
     );
 
@@ -32,7 +29,7 @@ ARCHITECTURE AES_Round_tb_arch OF AES_Round_tb IS
   SIGNAL signal_inter_ShiftRows_SubBytes : type_state;
   SIGNAL signal_inter_SubBytes_AddRoundKey : type_state;
   SIGNAL signal_inter_AddRoundKey_MixColumns : type_state;
-  SIGNAL idle_s : STD_LOGIC := '0'; 
+  SIGNAL idle_s : STD_LOGIC := '0';
 BEGIN
 
   DUT : AES_Round
@@ -43,9 +40,6 @@ BEGIN
     enableInvMixColumns_i => enableInvMixColumns_s,
     firstRound_i => firstRound_s,
     data_o => data_o_s,
-    inter_ShiftRows_SubBytes => signal_inter_ShiftRows_SubBytes,
-    inter_SubBytes_AddRoundKey => signal_inter_SubBytes_AddRoundKey,
-    inter_AddRoundKey_MixColumns => signal_inter_AddRoundKey_MixColumns,
     idle_i => idle_s);
 
   clock_s <= NOT clock_s AFTER 10 ns;

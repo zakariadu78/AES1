@@ -19,8 +19,8 @@ ARCHITECTURE Counter_tb_arch OF Counter_tb IS
       count_o : OUT bit4);
   END COMPONENT;
   SIGNAL reset_s : STD_LOGIC;
-  SIGNAL enable_s : STD_LOGIC;
-  SIGNAL clock_s : STD_LOGIC;
+  SIGNAL enable_s : STD_LOGIC := '1';
+  SIGNAL clock_s : STD_LOGIC := '0';
   SIGNAL count_s : bit4;
 BEGIN
   DUT : Counter
@@ -29,31 +29,14 @@ BEGIN
     enable_i => enable_s,
     clock_i => clock_s,
     count_o => count_s);
-
+  enable_s <= NOT enable_s AFTER 20 ns;
+  clock_s <= NOT clock_s AFTER 10 ns;
   P0 : PROCESS
   BEGIN
-    reset_s <= '0';
-    WAIT FOR 10 ns;
     reset_s <= '1';
+    WAIT FOR 10 ns;
+    reset_s <= '0';
     WAIT;
   END PROCESS P0;
-
-  P1 : PROCESS
-  BEGIN
-    enable_s <= '0';
-    WAIT FOR 20 ns;
-    enable_s <= '1';
-    WAIT FOR 194 ns;
-    enable_s <= '0';
-    WAIT;
-  END PROCESS P1;
-
-  P2 : PROCESS
-  BEGIN
-    clock_s <= '0';
-    WAIT FOR 7 ns;
-    clock_s <= '1';
-    WAIT FOR 7 ns;
-  END PROCESS P2;
 
 END ARCHITECTURE Counter_tb_arch;

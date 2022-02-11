@@ -11,12 +11,12 @@ z2
 cModel Technology
 d/run/media/zakaria/5F0DED5766B0A8E9/mines/2B/VHDL/Projet/AES
 Eaddroundkey
-Z0 w1644436923
+Z0 w1644542012
 Z1 DPx7 lib_aes 24 state_definition_package 0 22 @@L0C?4=lmc7WV5Afo>^62
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 2089
+!i122 2281
 Z5 dC:/Users/zakaria/Downloads/AES
 Z6 8./SRC/RTL/addRoundKey.vhd
 Z7 F./SRC/RTL/addRoundKey.vhd
@@ -26,9 +26,9 @@ V0<OY<AWdUG=m1oO<[?8Cj2
 !s100 z`J]k@b<kdZQdcdOd:EHF1
 Z8 OV;C;2020.1;71
 32
-Z9 !s110 1644504793
+Z9 !s110 1644542240
 !i10b 1
-Z10 !s108 1644504792.000000
+Z10 !s108 1644542240.000000
 Z11 !s90 -work|lib_rtl|./SRC/RTL/addRoundKey.vhd|
 Z12 !s107 ./SRC/RTL/addRoundKey.vhd|
 !i113 1
@@ -40,7 +40,7 @@ R2
 R3
 R4
 Z15 DEx4 work 11 addroundkey 0 22 0<OY<AWdUG=m1oO<[?8Cj2
-!i122 2089
+!i122 2281
 l16
 L14 21
 V7?M`lh5T2JO_S?^780je?0
@@ -56,12 +56,12 @@ R12
 R13
 R14
 Eaes
-Z16 w1644504788
+Z16 w1644542201
 R1
 R2
 R3
 R4
-!i122 2096
+!i122 2288
 R5
 Z17 8./SRC/RTL/AES.vhd
 Z18 F./SRC/RTL/AES.vhd
@@ -71,9 +71,9 @@ V?Co_M<SHVdZTOQjDK_;Nl1
 !s100 >4SoW^cVnUgF@1`4klgiQ0
 R8
 32
-Z19 !s110 1644504795
+Z19 !s110 1644542243
 !i10b 1
-Z20 !s108 1644504795.000000
+Z20 !s108 1644542243.000000
 Z21 !s90 -work|lib_rtl|./SRC/RTL/AES.vhd|
 Z22 !s107 ./SRC/RTL/AES.vhd|
 !i113 1
@@ -84,12 +84,12 @@ R1
 R2
 R3
 R4
-DEx4 work 3 aes 0 22 ?Co_M<SHVdZTOQjDK_;Nl1
-!i122 2096
-l88
-L20 138
-VY>B9;;BP_DDG]TbYYT6UH2
-!s100 8^Toe?NManWMn6AA_AZ6H1
+Z23 DEx4 work 3 aes 0 22 ?Co_M<SHVdZTOQjDK_;Nl1
+!i122 2288
+l85
+Z24 L20 135
+V]T;WID3[1J?TN`iM_C0Pc0
+!s100 YeKiT[fPA5PBN:[Y;AFRN1
 R8
 32
 R19
@@ -101,26 +101,26 @@ R22
 R13
 R14
 Eaes_round
-Z23 w1644448776
+Z25 w1644542017
 R1
 R2
 R3
 R4
-!i122 2093
+!i122 2285
 R5
-Z24 8./SRC/RTL/AES_Round.vhd
-Z25 F./SRC/RTL/AES_Round.vhd
+Z26 8./SRC/RTL/AES_Round.vhd
+Z27 F./SRC/RTL/AES_Round.vhd
 l0
 L8 1
-VLJKB`6^h?UJ4Z0k]Tbb2k0
-!s100 =hXlCo3[a3OECZYI?dLQ12
+V_lh^:1ID88c`4M@eYRPe^0
+!s100 >O7Bcmm1De_Q^lV7iElX02
 R8
 32
-Z26 !s110 1644504794
+Z28 !s110 1644542242
 !i10b 1
-Z27 !s108 1644504794.000000
-Z28 !s90 -work|lib_rtl|./SRC/RTL/AES_Round.vhd|
-Z29 !s107 ./SRC/RTL/AES_Round.vhd|
+Z29 !s108 1644542241.000000
+Z30 !s90 -work|lib_rtl|./SRC/RTL/AES_Round.vhd|
+Z31 !s107 ./SRC/RTL/AES_Round.vhd|
 !i113 1
 R13
 R14
@@ -129,76 +129,76 @@ R1
 R2
 R3
 R4
-Z30 DEx4 work 9 aes_round 0 22 LJKB`6^h?UJ4Z0k]Tbb2k0
-!i122 2093
-l59
-L24 76
-Vc2d_e9@[74Wnk_E]a<VaX3
-!s100 [3H<gf``;hh;<Hoh]ciL13
+Z32 DEx4 work 9 aes_round 0 22 _lh^:1ID88c`4M@eYRPe^0
+!i122 2285
+l56
+L21 70
+V6V5HSNWbSOD[nQABbUSf]0
+!s100 mm_i4=R5=CZe_Ah[eL4;g2
 R8
 32
-R26
-!i10b 1
-R27
 R28
+!i10b 1
 R29
+R30
+R31
 !i113 1
 R13
 R14
 Caes_round_conf
 eAES_Round
 aAES_Round_arch
-Z31 DEx4 work 8 subbytes 0 22 6gQLXzbzD9nm483FR_76D1
-Z32 DEx4 work 9 mixcolumn 0 22 JD]>XdW60Wc>l;02j3VXi1
+Z33 DEx4 work 8 subbytes 0 22 6gQLXzbzD9nm483FR_76D1
+Z34 DEx4 work 9 mixcolumn 0 22 JD]>XdW60Wc>l;02j3VXi1
 DCx7 lib_rtl 13 subbytes_conf 0 22 Kg]>1z0^k2<U1D`BelOo80
-Z33 DEx4 work 9 shiftrows 0 22 0Lc_N9@FITbM98SC2VGi;0
+Z35 DEx4 work 9 shiftrows 0 22 0Lc_N9@FITbM98SC2VGi;0
 R15
-DAx4 work 9 aes_round 14 aes_round_arch 22 c2d_e9@[74Wnk_E]a<VaX3
+DAx4 work 9 aes_round 14 aes_round_arch 22 6V5HSNWbSOD[nQABbUSf]0
 R1
 R2
 R3
 R4
-R30
-!i122 2093
-R23
-R5
-R24
+R32
+!i122 2285
 R25
+R5
+R26
+R27
 l0
-L101 1
-VAg`^[HWo2k6=TOjZZFFo>0
-!s100 a@4gP7;KmbmXS8@Hf7>zB1
+L92 1
+VQ]M^>]JLma54BBg`92R0^0
+!s100 @L=ma;n41R=OOzYEinT?_2
 R8
 32
-R26
-!i10b 1
-R27
 R28
+!i10b 1
 R29
+R30
+R31
 !i113 1
 R13
 R14
 Ecounter
-Z34 w1644495536
+Z36 w1644542022
 R1
 R2
 R3
 R4
-!i122 2092
+!i122 2284
 R5
-Z35 8./SRC/RTL/Counter.vhd
-Z36 F./SRC/RTL/Counter.vhd
+Z37 8./SRC/RTL/Counter.vhd
+Z38 F./SRC/RTL/Counter.vhd
 l0
 L8 1
 V`Q?WIH6BXI^Z_87fR901<1
 !s100 kAdfIQEWGmXQ]gjj<aR]?2
 R8
 32
-R26
+Z39 !s110 1644542241
 !i10b 1
-Z37 !s108 1644504793.000000
-Z38 !s90 -work|lib_rtl|./SRC/RTL/Counter.vhd|
-Z39 !s107 ./SRC/RTL/Counter.vhd|
+R29
+Z40 !s90 -work|lib_rtl|./SRC/RTL/Counter.vhd|
+Z41 !s107 ./SRC/RTL/Counter.vhd|
 !i113 1
 R13
 R14
@@ -208,42 +208,42 @@ R2
 R3
 R4
 DEx4 work 7 counter 0 22 `Q?WIH6BXI^Z_87fR901<1
-!i122 2092
+!i122 2284
 l19
 L16 18
-VS=eH^zid@bI<GA3KBm2jV0
-!s100 7PK=29VEE_bhX8Ek_QFFP0
+VP;YAmSNflch6TTb=jC6hP0
+!s100 KPmWM;fM^ffVA]ACKhlF@2
 R8
 32
-R26
-!i10b 1
-R37
-R38
 R39
+!i10b 1
+R29
+R40
+R41
 !i113 1
 R13
 R14
 Efsm_aes
-Z40 w1644496278
+Z42 w1644496278
 R1
 R2
 R3
 R4
-!i122 2094
+!i122 2274
 R5
-Z41 8./SRC/RTL/AES_FSM.vhd
-Z42 F./SRC/RTL/AES_FSM.vhd
+Z43 8./SRC/RTL/AES_FSM.vhd
+Z44 F./SRC/RTL/AES_FSM.vhd
 l0
 L7 1
 VHRb`_MBPlfRkFiCi1OliK0
 !s100 ihZ@FzaUcNEF12:9:?bOJ3
 R8
 32
-R19
+Z45 !s110 1644537696
 !i10b 1
-R27
-Z43 !s90 -work|lib_rtl|./SRC/RTL/AES_FSM.vhd|
-Z44 !s107 ./SRC/RTL/AES_FSM.vhd|
+Z46 !s108 1644537696.000000
+Z47 !s90 -work|lib_rtl|./SRC/RTL/AES_FSM.vhd|
+Z48 !s107 ./SRC/RTL/AES_FSM.vhd|
 !i113 1
 R13
 R14
@@ -253,18 +253,18 @@ R2
 R3
 R4
 DEx4 work 7 fsm_aes 0 22 HRb`_MBPlfRkFiCi1OliK0
-!i122 2094
+!i122 2274
 l25
-L19 99
+Z49 L19 99
 V>7Zn4@F_IX?aUcFPAZm<f2
 !s100 dzJo7WjK0l8c0NCHM=MYo0
 R8
 32
-R19
+R45
 !i10b 1
-R27
-R43
-R44
+R46
+R47
+R48
 !i113 1
 R13
 R14
@@ -281,8 +281,8 @@ DEx4 work 7 fsm_aes 0 22 MAk]CGKB6JMAbQzCAn3j32
 !i122 1246
 w1644437810
 R5
-R41
-R42
+R43
+R44
 l0
 L129 1
 VBcgoQBFEOc1CD0B:AFoQh1
@@ -292,32 +292,77 @@ R8
 !s110 1644438078
 !i10b 1
 !s108 1644438078.000000
-R43
-R44
+R47
+R48
 !i113 1
 R13
 R14
-Ekeyexpansion_table
-Z45 w1644445901
+Efsm_aes_moore
+Z50 w1644542188
 R1
 R2
 R3
 R4
-!i122 2090
+!i122 2286
 R5
-Z46 8./SRC/RTL/KeyExpansion_table.vhd
-Z47 F./SRC/RTL/KeyExpansion_table.vhd
+R43
+R44
+l0
+L7 1
+VN=ib<kXHEAzf73A`Lk<?:2
+!s100 S80[LQ0H]LGZ^OdP1P:KF1
+R8
+32
+R28
+!i10b 1
+Z51 !s108 1644542242.000000
+R47
+R48
+!i113 1
+R13
+R14
+Afsm_aes_moore_arch
+R1
+R2
+R3
+R4
+DEx4 work 13 fsm_aes_moore 0 22 N=ib<kXHEAzf73A`Lk<?:2
+!i122 2286
+l25
+R49
+V;j80_QAzEfgKMbK;3:?Dz3
+!s100 I>YaekGOf3S^2fK?Pm@An2
+R8
+32
+R28
+!i10b 1
+R51
+R47
+R48
+!i113 1
+R13
+R14
+Ekeyexpansion_table
+Z52 w1644542025
+R1
+R2
+R3
+R4
+!i122 2282
+R5
+Z53 8./SRC/RTL/KeyExpansion_table.vhd
+Z54 F./SRC/RTL/KeyExpansion_table.vhd
 l0
 L8 1
 VEhHC7HEU?[GMWQcb1k@Mn0
 !s100 n8`z0=2]@05^>l7^gibc01
 R8
 32
-R9
+R39
 !i10b 1
-R37
-Z48 !s90 -work|lib_rtl|./SRC/RTL/KeyExpansion_table.vhd|
-Z49 !s107 ./SRC/RTL/KeyExpansion_table.vhd|
+R10
+Z55 !s90 -work|lib_rtl|./SRC/RTL/KeyExpansion_table.vhd|
+Z56 !s107 ./SRC/RTL/KeyExpansion_table.vhd|
 !i113 1
 R13
 R14
@@ -327,42 +372,42 @@ R2
 R3
 R4
 DEx4 work 18 keyexpansion_table 0 22 EhHC7HEU?[GMWQcb1k@Mn0
-!i122 2090
+!i122 2282
 l72
 L14 61
 VPnAMJ]EJo;MV]f9bbH4a^2
 !s100 lWoY:B?hnNXLY6]O]@<Al0
 R8
 32
-R9
+R39
 !i10b 1
-R37
-R48
-R49
+R10
+R55
+R56
 !i113 1
 R13
 R14
 Emixcolumn
-Z50 w1644436971
+Z57 w1644542027
 R1
 R2
 R3
 R4
-!i122 2088
+!i122 2280
 R5
-Z51 8./SRC/RTL/MixColumn.vhd
-Z52 F./SRC/RTL/MixColumn.vhd
+Z58 8./SRC/RTL/MixColumn.vhd
+Z59 F./SRC/RTL/MixColumn.vhd
 l0
 L8 1
 VJD]>XdW60Wc>l;02j3VXi1
 !s100 3`1J0e=?2bk`mQn8j6Cbd1
 R8
 32
-Z53 !s110 1644504792
+R9
 !i10b 1
-R10
-Z54 !s90 -work|lib_rtl|./SRC/RTL/MixColumn.vhd|
-Z55 !s107 ./SRC/RTL/MixColumn.vhd|
+Z60 !s108 1644542239.000000
+Z61 !s90 -work|lib_rtl|./SRC/RTL/MixColumn.vhd|
+Z62 !s107 ./SRC/RTL/MixColumn.vhd|
 !i113 1
 R13
 R14
@@ -371,43 +416,43 @@ R1
 R2
 R3
 R4
-R32
-!i122 2088
+R34
+!i122 2280
 l22
 L15 34
 VYhEL`fcbeFRfUA91h^AfH1
 !s100 `SLN4ZoTJ0ocEnP6D`?X^1
 R8
 32
-R53
+R9
 !i10b 1
-R10
-R54
-R55
+R60
+R61
+R62
 !i113 1
 R13
 R14
 Emux
-Z56 w1644442982
+Z63 w1644542029
 R1
 R2
 R3
 R4
-!i122 2091
+!i122 2283
 R5
-Z57 8./SRC/RTL/MUX.vhd
-Z58 F./SRC/RTL/MUX.vhd
+Z64 8./SRC/RTL/MUX.vhd
+Z65 F./SRC/RTL/MUX.vhd
 l0
 L7 1
-VHHVBEQeJJ6O3VF6FzK7_W0
-!s100 16W81kW9UbAM^DQQLfC]d0
+Vc<;]zW@C[OZeY[azKB_bE3
+!s100 o3JSml`?KO0aClEOn?B250
 R8
 32
-R9
+R39
 !i10b 1
-R37
-Z59 !s90 -work|lib_rtl|./SRC/RTL/MUX.vhd|
-Z60 !s107 ./SRC/RTL/MUX.vhd|
+R29
+Z66 !s90 -work|lib_rtl|./SRC/RTL/MUX.vhd|
+Z67 !s107 ./SRC/RTL/MUX.vhd|
 !i113 1
 R13
 R14
@@ -416,43 +461,43 @@ R1
 R2
 R3
 R4
-DEx4 work 3 mux 0 22 HHVBEQeJJ6O3VF6FzK7_W0
-!i122 2091
+DEx4 work 3 mux 0 22 c<;]zW@C[OZeY[azKB_bE3
+!i122 2283
 l17
 L15 12
-V]A@j8b^hLXZ@1:GOULJ>?0
-!s100 4oIc]dHbgBAQ[URiMNYQQ0
+Vd7oWQkoK_Z52PA2IJ4oQG1
+!s100 Z9_6IB728Ozj@De?VAhg=2
 R8
 32
-R9
+R39
 !i10b 1
-R37
-R59
-R60
+R29
+R66
+R67
 !i113 1
 R13
 R14
 Esbox_inv
-Z61 w1644436977
+Z68 w1644542031
 R1
 R2
 R3
 R4
-!i122 2085
+!i122 2277
 R5
-Z62 8./SRC/RTL/Sbox.vhd
-Z63 F./SRC/RTL/Sbox.vhd
+Z69 8./SRC/RTL/Sbox.vhd
+Z70 F./SRC/RTL/Sbox.vhd
 l0
 L8 1
 V4f9NX22MjP3JBEg:N`7mW0
 !s100 EY3]Fg1Fn@QnEI:Lm3l=I1
 R8
 32
-Z64 !s110 1644504791
+Z71 !s110 1644542238
 !i10b 1
-Z65 !s108 1644504791.000000
-Z66 !s90 -work|lib_rtl|./SRC/RTL/Sbox.vhd|
-Z67 !s107 ./SRC/RTL/Sbox.vhd|
+Z72 !s108 1644542238.000000
+Z73 !s90 -work|lib_rtl|./SRC/RTL/Sbox.vhd|
+Z74 !s107 ./SRC/RTL/Sbox.vhd|
 !i113 1
 R13
 R14
@@ -461,43 +506,43 @@ R1
 R2
 R3
 R4
-Z68 DEx4 work 8 sbox_inv 0 22 4f9NX22MjP3JBEg:N`7mW0
-!i122 2085
+Z75 DEx4 work 8 sbox_inv 0 22 4f9NX22MjP3JBEg:N`7mW0
+!i122 2277
 l15
 L14 274
 VGilXe4eK`b6>FhC>>g:_:3
 !s100 g5MUF1>WGama^W=NJ@^kL3
 R8
 32
-R64
+R71
 !i10b 1
-R65
-R66
-R67
+R72
+R73
+R74
 !i113 1
 R13
 R14
 Eshiftrows
-Z69 w1644436986
+Z76 w1644542033
 R1
 R2
 R3
 R4
-!i122 2087
+!i122 2279
 R5
-Z70 8./SRC/RTL/ShiftRow.vhd
-Z71 F./SRC/RTL/ShiftRow.vhd
+Z77 8./SRC/RTL/ShiftRow.vhd
+Z78 F./SRC/RTL/ShiftRow.vhd
 l0
 L8 1
 V0Lc_N9@FITbM98SC2VGi;0
 !s100 ;?OF5cPO:j_NlcmM:?KXI2
 R8
 32
-R53
+Z79 !s110 1644542239
 !i10b 1
-R65
-Z72 !s90 -work|lib_rtl|./SRC/RTL/ShiftRow.vhd|
-Z73 !s107 ./SRC/RTL/ShiftRow.vhd|
+R60
+Z80 !s90 -work|lib_rtl|./SRC/RTL/ShiftRow.vhd|
+Z81 !s107 ./SRC/RTL/ShiftRow.vhd|
 !i113 1
 R13
 R14
@@ -506,32 +551,32 @@ R1
 R2
 R3
 R4
-R33
-!i122 2087
+R35
+!i122 2279
 l16
-Z74 L14 25
+Z82 L14 25
 V11e:USlN6PAfb?;oU_9mE1
 !s100 z?kj;3D?YH6i9jNzoJZAW2
 R8
 32
-R53
+R79
 !i10b 1
-R65
-R72
-R73
+R60
+R80
+R81
 !i113 1
 R13
 R14
 Estatetobit128
-Z75 w1644504774
+Z83 w1644542035
 R1
 R2
 R3
 R4
-!i122 2095
+!i122 2287
 R5
-Z76 8./SRC/RTL/stateToBit128.vhd
-Z77 F./SRC/RTL/stateToBit128.vhd
+Z84 8./SRC/RTL/stateToBit128.vhd
+Z85 F./SRC/RTL/stateToBit128.vhd
 l0
 L8 1
 V_S;Xi@_oGVQ`7eRzQWCdn3
@@ -540,9 +585,9 @@ R8
 32
 R19
 !i10b 1
-R20
-Z78 !s90 -work|lib_rtl|./SRC/RTL/stateToBit128.vhd|
-Z79 !s107 ./SRC/RTL/stateToBit128.vhd|
+R51
+Z86 !s90 -work|lib_rtl|./SRC/RTL/stateToBit128.vhd|
+Z87 !s107 ./SRC/RTL/stateToBit128.vhd|
 !i113 1
 R13
 R14
@@ -552,42 +597,42 @@ R2
 R3
 R4
 DEx4 work 13 statetobit128 0 22 _S;Xi@_oGVQ`7eRzQWCdn3
-!i122 2095
+!i122 2287
 l16
 L15 6
-VYQ4fXPSbb;Q]kW<BReEhI3
-!s100 2ao1BOHgjO>=7aJg507@D0
+VfICe811FmTDf^mJTfSU4J0
+!s100 b@CzDXTo`gT;M7?5iUGZh0
 R8
 32
 R19
 !i10b 1
-R20
-R78
-R79
+R51
+R86
+R87
 !i113 1
 R13
 R14
 Esubbytes
-Z80 w1644436990
+Z88 w1644542042
 R1
 R2
 R3
 R4
-!i122 2086
+!i122 2278
 R5
-Z81 8./SRC/RTL/SubBytes.vhd
-Z82 F./SRC/RTL/SubBytes.vhd
+Z89 8./SRC/RTL/SubBytes.vhd
+Z90 F./SRC/RTL/SubBytes.vhd
 l0
 L7 1
 V6gQLXzbzD9nm483FR_76D1
 !s100 lQ0:4d`?1kP:5gaGkjfF?3
 R8
 32
-R64
+R79
 !i10b 1
-R65
-Z83 !s90 -work|lib_rtl|./SRC/RTL/SubBytes.vhd|
-Z84 !s107 ./SRC/RTL/SubBytes.vhd|
+R72
+Z91 !s90 -work|lib_rtl|./SRC/RTL/SubBytes.vhd|
+Z92 !s107 ./SRC/RTL/SubBytes.vhd|
 !i113 1
 R13
 R14
@@ -596,48 +641,48 @@ R1
 R2
 R3
 R4
-R31
-!i122 2086
+R33
+!i122 2278
 l25
-R74
+R82
 V`Wi0;;hj@BEGmf:5;bWa42
 !s100 hYKZbl;Ha0CM8Ok4`Tfm42
 R8
 32
-R64
+R79
 !i10b 1
-R65
-R83
-R84
+R72
+R91
+R92
 !i113 1
 R13
 R14
 Csubbytes_conf
 eSubBytes
 aSubBytes_arch
-R68
+R75
 DAx4 work 8 subbytes 13 subbytes_arch 22 `Wi0;;hj@BEGmf:5;bWa42
 R1
 R2
 R3
 R4
-R31
-!i122 2086
-R80
+R33
+!i122 2278
+R88
 R5
-R81
-R82
+R89
+R90
 l0
 L40 1
 VKg]>1z0^k2<U1D`BelOo80
 !s100 PKcgBfzJ@d0UJG0nURKfj0
 R8
 32
-R64
+R79
 !i10b 1
-R65
-R83
-R84
+R72
+R91
+R92
 !i113 1
 R13
 R14

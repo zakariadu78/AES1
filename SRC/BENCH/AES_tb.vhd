@@ -16,7 +16,7 @@ ARCHITECTURE AES_tb_arch OF AES_tb IS
       data_i : IN type_state;
       aes_on_o : OUT STD_LOGIC;
       data_o : OUT bit128
-      );
+    );
   END COMPONENT AES;
 
   SIGNAL start_s, reset_s, aes_on_s : STD_LOGIC;
