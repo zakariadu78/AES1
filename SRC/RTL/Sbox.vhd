@@ -13,6 +13,7 @@ ENTITY Sbox_Inv IS
 END ENTITY;
 ARCHITECTURE Sbox_inv_arch OF Sbox_inv IS
 BEGIN
+    -- On suit le tableau de la norme
     data_o <=
         x"63" WHEN data_i = x"00" ELSE
         x"7C" WHEN data_i = x"01" ELSE

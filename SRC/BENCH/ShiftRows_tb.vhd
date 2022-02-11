@@ -23,7 +23,7 @@ BEGIN
     Data_i => data_i_s,
     Data_o => data_o_s
   );
-
+  -- Test pour une matrice simple
   data_i_s <= ((X"00", X"01", X"02", X"03"),
     (X"10", X"11", X"12", X"13"),
     (X"20", X"21", X"22", X"23"),

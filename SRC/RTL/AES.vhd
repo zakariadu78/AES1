@@ -7,12 +7,12 @@ USE lib_aes.state_definition_package.ALL;
 
 ENTITY AES IS
     PORT (
-        start_i : IN STD_LOGIC;
-        clock_i : IN STD_LOGIC;
-        reset_i : IN STD_LOGIC;
-        data_i : IN type_state;
-        aes_on_o : OUT STD_LOGIC;
-        data_o : OUT bit128
+        start_i : IN STD_LOGIC; -- Permet le démarrage de l'algorithme
+        clock_i : IN STD_LOGIC; -- Synchronise les états et les composents 
+        reset_i : IN STD_LOGIC; -- Permet de repartir à l'état idle
+        data_i : IN type_state; -- Texte pour le round 0
+        aes_on_o : OUT STD_LOGIC;   -- Indique la fin de l'algorithme 
+        data_o : OUT bit128 -- Sortie finale
     );
 
 END ENTITY AES;
@@ -21,10 +21,10 @@ ARCHITECTURE AES_arch OF AES IS
 
     COMPONENT Counter IS
         PORT (
-            reset_i : IN STD_LOGIC;
-            enable_i : IN STD_LOGIC;
-            clock_i : IN STD_LOGIC;
-            count_o : OUT bit4
+            reset_i : IN STD_LOGIC; -- Remet le compteur à 10
+            enable_i : IN STD_LOGIC; -- Permet de décrémenter le compteur 
+            clock_i : IN STD_LOGIC; 
+            count_o : OUT bit4 -- Valeur du compteur 
         );
     END COMPONENT Counter;
 
@@ -36,21 +36,21 @@ ARCHITECTURE AES_arch OF AES IS
             start_i : IN STD_LOGIC;
             done_o, enableCounter_o, enableMixColumn_o,
             enableOutput_o, firstRound_o, getciphertext_o,
-            resetCounter_o, idle_o : OUT STD_LOGIC
+            resetCounter_o, idle_o : OUT STD_LOGIC -- Signaux de controle
         );
     END COMPONENT FSM_AES_MOORE;
 
     COMPONENT KeyExpansion_table IS
         PORT (
             round_i : IN bit4;
-            expansion_key_o : OUT type_key
+            expansion_key_o : OUT type_key  -- Clé de ronde 
         );
     END COMPONENT KeyExpansion_table;
 
     COMPONENT AES_Round IS
         PORT (
             clock_i : IN STD_LOGIC;
-            currentKey_i : IN type_key;
+            currentKey_i : IN type_key; 
             currentText_i : IN type_state;
             enableInvMixColumns_i : IN STD_LOGIC;
             firstRound_i : IN STD_LOGIC;
@@ -61,13 +61,13 @@ ARCHITECTURE AES_arch OF AES IS
 
     COMPONENT MUX IS
         PORT (
-            I0_i : IN type_state;
-            I1_i : IN type_state;
+            I0_i : IN type_state;   --Entrée 1 MUX
+            I1_i : IN type_state;   --Entrée 2 MUX
             S_i : IN STD_LOGIC;
             O_o : OUT type_state);
     END COMPONENT MUX;
 
-    COMPONENT stateToBit128 IS
+    COMPONENT stateToBit128 IS  --Convertit type_state en Bit128 pour le message final 
         PORT (
             entree_i : IN type_state;
             sortie_o : OUT bit128
@@ -133,14 +133,13 @@ BEGIN
         O_o => currentText_s
     );
     seq_0 : PROCESS (clock_i, reset_i) IS
-    BEGIN -- process seq_0
-        IF reset_i = '1' THEN -- asynchronous reset (active-low)
+    BEGIN 
+        IF reset_i = '1' THEN -- On retourne à l'état 0
             state_s <= ((OTHERS => (OTHERS => (OTHERS => '0'))));
-            -- or use 2 x for ... generate
         ELSE
             IF clock_i'event AND clock_i = '1' THEN
-                IF enableOutput_s = '1' THEN -- rising clock
-                    state_s <= data_o_s;
+                IF enableOutput_s = '1' THEN 
+                    state_s <= data_o_s;    -- On autorise l'écriture pour la sortie finale 
                 END IF;
             END IF;
         END IF;
@@ -148,7 +147,7 @@ BEGIN
 
     STATETO128 : stateToBit128
     PORT MAP(
-        entree_i => state_s,
-        sortie_o => data_o
+        entree_i => state_s,    --Type State
+        sortie_o => data_o      --Bit 128 pour déchiffrer le texte
     );
 END AES_arch;

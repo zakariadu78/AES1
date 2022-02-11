@@ -28,6 +28,7 @@ BEGIN
 
     P0 : PROCESS
     BEGIN
+        -- On teste tout
         data_i_s <= x"00";
         WAIT FOR 10 ns;
         data_i_s <= x"01";

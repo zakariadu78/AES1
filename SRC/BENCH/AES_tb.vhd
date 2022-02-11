@@ -37,10 +37,13 @@ BEGIN
     data_o => data_o_s
   );
 
+  -- Sortir de l'état idle
   start_s <= '0', '1' AFTER 30 ns;
+  -- Periode de 20 ns
   clock_s <= NOT clock_s AFTER 10 ns;
   reset_s <= '0';
   data_i_s <= (
+    -- Texte à déchiffrer  
     (x"8c", x"06", x"de", x"aa"),
     (x"11", x"ad", x"ca", x"03"),
     (x"35", x"44", x"ec", x"43"),

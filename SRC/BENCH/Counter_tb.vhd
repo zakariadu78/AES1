@@ -29,8 +29,10 @@ BEGIN
     enable_i => enable_s,
     clock_i => clock_s,
     count_o => count_s);
+   -- On active plusieurs fois le signal enable pour décrémenter  
   enable_s <= NOT enable_s AFTER 20 ns;
   clock_s <= NOT clock_s AFTER 10 ns;
+  -- Process différent pour tester le reset
   P0 : PROCESS
   BEGIN
     reset_s <= '1';

@@ -29,6 +29,7 @@ BEGIN
 
   enablemc_i_s <= '1';
   data_i_s <= (
+    -- Test pour la round 1
     (X"12", X"FD", X"89", X"2C"),
     (X"90", X"BB", X"E2", X"FD"),
     (X"56", X"A1", X"BF", X"8A"),

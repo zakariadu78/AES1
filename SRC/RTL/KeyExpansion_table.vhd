@@ -12,7 +12,7 @@ ENTITY KeyExpansion_table IS
 END KeyExpansion_table;
 
 ARCHITECTURE KeyExpansion_table_arch OF KeyExpansion_table IS
-  TYPE key_memory IS ARRAY(0 TO 10) OF type_key;
+  TYPE key_memory IS ARRAY(0 TO 10) OF type_key;  --Changement de la table de base par un tableau de 10 clés de ronde
   CONSTANT KeyMemory_s : key_memory := (
   ((x"2b", x"28", x"ab", x"09"),
     (x"7e", x"ae", x"f7", x"cf"),
@@ -70,5 +70,5 @@ ARCHITECTURE KeyExpansion_table_arch OF KeyExpansion_table IS
     (x"0b", x"7e", x"0e", x"65")));
 
 BEGIN
-  expansion_key_o <= KeyMemory_s(to_integer(unsigned(round_i)));
+  expansion_key_o <= KeyMemory_s(to_integer(unsigned(round_i)));  -- On renvoie la clé correspondant à la ronde 
 END ARCHITECTURE KeyExpansion_table_arch;

@@ -13,7 +13,7 @@ END AddRoundKey;
 
 ARCHITECTURE AddRoundKey_arch OF AddRoundKey IS
 
-BEGIN
+BEGIN -- XOR data et clé pour chaque octet
     Data_o(0)(0) <= Data_i(0)(0) XOR Key_i(0)(0);
     Data_o(0)(1) <= Data_i(0)(1) XOR Key_i(0)(1);
     Data_o(0)(2) <= Data_i(0)(2) XOR Key_i(0)(2);

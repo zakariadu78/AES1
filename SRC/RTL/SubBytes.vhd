@@ -26,6 +26,7 @@ BEGIN
 
   temp <= data_i(0)(0);
 
+  -- On applique Sbox pour tout les éléments de notre matrice d'entrée
   loopi : FOR i IN 0 TO 3 GENERATE
     loopj : FOR j IN 0 TO 3 GENERATE
       SBOX : Sbox_inv PORT MAP(

@@ -14,7 +14,7 @@ END MixColumn;
 
 ARCHITECTURE MixColumn_arch OF MixColumn IS
 
-	SIGNAL mult2_s, mult4_s, mult8_s, mult9_s, multb_s, multd_s, multe_s : type_state;
+	SIGNAL mult2_s, mult4_s, mult8_s, mult9_s, multb_s, multd_s, multe_s : type_state;	-- Permettra les calculs des matrices de multiplication pour tout les éléments data_i
 	SIGNAL col_i_s : type_state;
 	SIGNAL col_o_s : type_state;
 	SIGNAL data_o_s : type_state;
@@ -34,7 +34,7 @@ BEGIN
 			multd_s(ligne)(colonne) <= mult8_s(ligne)(colonne) XOR mult4_s(ligne)(colonne) XOR col_i_s(ligne)(colonne);
 			multe_s(ligne)(colonne) <= mult8_s(ligne)(colonne) XOR mult4_s(ligne)(colonne) XOR mult2_s(ligne)(colonne);
 		END GENERATE L1;
-
+		-- Calcul suivant la matrice indiquée par la norme invAes
 		col_o_s(0)(colonne) <= multe_s(0)(colonne) XOR multb_s(1)(colonne) XOR multd_s(2)(colonne) XOR mult9_s(3)(colonne);
 		col_o_s(1)(colonne) <= mult9_s(0)(colonne) XOR multe_s(1)(colonne) XOR multb_s(2)(colonne) XOR multd_s(3)(colonne);
 		col_o_s(2)(colonne) <= multd_s(0)(colonne) XOR mult9_s(1)(colonne) XOR multe_s(2)(colonne) XOR multb_s(3)(colonne);
@@ -44,5 +44,5 @@ BEGIN
 	END GENERATE L0;
 
 	data_o <= data_o_s WHEN enablemc_i = '1' ELSE
-		data_i;
+		data_i;	-- Si enable MixColumn est à 0, on ne change pas la donnée
 END MixColumn_arch;

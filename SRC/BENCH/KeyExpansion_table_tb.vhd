@@ -26,6 +26,7 @@ BEGIN
 
   P3 : PROCESS
   BEGIN
+    -- On prend 3 clés pour 3 rondes aléatoires
     round_s <= X"0";
     WAIT FOR 30 ns;
     round_s <= X"6";

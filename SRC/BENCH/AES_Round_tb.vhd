@@ -43,6 +43,8 @@ BEGIN
     idle_i => idle_s);
 
   clock_s <= NOT clock_s AFTER 10 ns;
+  
+  -- Données d'entrée pour la round 9
   currentKey_s <= ((x"0b", x"69", x"f6", x"09"),
     (x"b8", x"85", x"cd", x"57"),
     (x"15", x"52", x"d9", x"7a"),

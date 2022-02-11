@@ -18,9 +18,9 @@ BEGIN
   seq0 : PROCESS (S_i, I0_i, I1_i)
   BEGIN
     IF S_i = '1' THEN
-      O_o <= I1_i;
+      O_o <= I1_i;  -- Premiere ronde : Egale à la donnée d'entrée AES
     ELSE
-      O_o <= I0_i;
+      O_o <= I0_i;   --  Autres rondes : Egale à la sortie de la ronde précédente
     END IF;
   END PROCESS seq0;
 END ARCHITECTURE MUX_arch;
