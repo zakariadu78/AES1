@@ -5,14 +5,14 @@ LIBRARY lib_rtl;
 LIBRARY lib_aes;
 USE lib_aes.state_definition_package.ALL;
 
-ENTITY MixColumn IS
+ENTITY inv_MixColumn IS
 	PORT (
 		data_i : IN type_state;
 		data_o : OUT type_state;
 		enablemc_i : IN STD_LOGIC);
-END MixColumn;
+END inv_MixColumn;
 
-ARCHITECTURE MixColumn_arch OF MixColumn IS
+ARCHITECTURE inv_MixColumn_arch OF inv_MixColumn IS
 
 	SIGNAL mult2_s, mult4_s, mult8_s, mult9_s, multb_s, multd_s, multe_s : type_state;	-- Permettra les calculs des matrices de multiplication pour tout les éléments data_i
 	SIGNAL col_i_s : type_state;
@@ -45,4 +45,4 @@ BEGIN
 
 	data_o <= data_o_s WHEN enablemc_i = '1' ELSE
 		data_i;	-- Si enable MixColumn est à 0, on ne change pas la donnée
-END MixColumn_arch;
+END inv_MixColumn_arch;

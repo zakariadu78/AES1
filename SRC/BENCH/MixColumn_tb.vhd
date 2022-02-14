@@ -5,10 +5,10 @@ LIBRARY lib_rtl;
 LIBRARY lib_aes;
 USE lib_aes.state_definition_package.ALL;
 
-ENTITY MixColumn_tb IS
-END ENTITY MixColumn_tb;
-ARCHITECTURE MixColumn_tb_arch OF MixColumn_tb IS
-  COMPONENT MixColumn
+ENTITY inv_MixColumn_tb IS
+END ENTITY inv_MixColumn_tb;
+ARCHITECTURE inv_MixColumn_tb_arch OF inv_MixColumn_tb IS
+  COMPONENT inv_MixColumn
     PORT (
       data_i : IN type_state;
       data_o : OUT type_state;
@@ -19,7 +19,7 @@ ARCHITECTURE MixColumn_tb_arch OF MixColumn_tb IS
   SIGNAL data_i_s, data_o_s : type_state;
 
 BEGIN
-  DUT : MixColumn
+  DUT : inv_MixColumn
   PORT MAP
   (
     data_i => data_i_s,
@@ -34,12 +34,12 @@ BEGIN
     (X"90", X"BB", X"E2", X"FD"),
     (X"56", X"A1", X"BF", X"8A"),
     (X"F9", X"01", X"93", X"1C"));
-END ARCHITECTURE MixColumn_tb_arch;
+END ARCHITECTURE inv_MixColumn_tb_arch;
 
-CONFIGURATION MixColumn_tb_conf OF MixColumn_tb IS
-  FOR MixColumn_tb_arch
-    FOR DUT : MixColumn
-      USE ENTITY LIB_RTL.MixColumn(MixColumn_arch);
+CONFIGURATION inv_MixColumn_tb_conf OF inv_MixColumn_tb IS
+  FOR inv_MixColumn_tb_arch
+    FOR DUT : inv_MixColumn
+      USE ENTITY LIB_RTL.inv_MixColumn(inv_MixColumn_arch);
     END FOR;
   END FOR;
-END MixColumn_tb_conf;
+END inv_MixColumn_tb_conf;

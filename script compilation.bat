@@ -1,6 +1,6 @@
 C:\intelFPGA\20.1\modelsim_ase\win32aloem\vdel -lib LIB/lib_aes -all
-C:\intelFPGA\20.1\modelsim_ase\win32aloem\vdel -lib LIB/lib_aes -all
-C:\intelFPGA\20.1\modelsim_ase\win32aloem\vdel -lib LIB/lib_aes -all 
+C:\intelFPGA\20.1\modelsim_ase\win32aloem\vdel -lib LIB/lib_rtl -all
+C:\intelFPGA\20.1\modelsim_ase\win32aloem\vdel -lib LIB/lib_bench -all 
 
 
 C:\intelFPGA\20.1\modelsim_ase\win32aloem\vlib ./LIB/lib_aes

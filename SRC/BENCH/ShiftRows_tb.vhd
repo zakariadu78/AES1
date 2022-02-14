@@ -4,10 +4,10 @@ USE IEEE.numeric_std.ALL;
 LIBRARY lib_rtl;
 LIBRARY lib_aes;
 USE lib_aes.state_definition_package.ALL;
-ENTITY ShiftRows_tb IS
-END ENTITY ShiftRows_tb;
-ARCHITECTURE ShiftRows_tb_arch OF ShiftRows_tb IS
-  COMPONENT ShiftRows
+ENTITY inv_ShiftRows_tb IS
+END ENTITY inv_ShiftRows_tb;
+ARCHITECTURE inv_ShiftRows_tb_arch OF inv_ShiftRows_tb IS
+  COMPONENT inv_ShiftRows
     PORT (
       Data_i : IN type_state;
       Data_o : OUT type_state
@@ -17,7 +17,7 @@ ARCHITECTURE ShiftRows_tb_arch OF ShiftRows_tb IS
   SIGNAL data_i_s : type_state;
   SIGNAL data_o_s : type_state;
 BEGIN
-  DUT : ShiftRows
+  DUT : inv_ShiftRows
   PORT MAP
   (
     Data_i => data_i_s,
@@ -28,4 +28,4 @@ BEGIN
     (X"10", X"11", X"12", X"13"),
     (X"20", X"21", X"22", X"23"),
     (X"30", X"31", X"32", X"33"));
-END ARCHITECTURE ShiftRows_tb_arch;
+END ARCHITECTURE inv_ShiftRows_tb_arch;

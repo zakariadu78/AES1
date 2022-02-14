@@ -4,10 +4,10 @@ USE IEEE.numeric_std.ALL;
 LIBRARY lib_rtl;
 LIBRARY lib_aes;
 USE lib_aes.state_definition_package.ALL;
-ENTITY SubBytes_tb IS
-END ENTITY SubBytes_tb;
-ARCHITECTURE SubBytes_tb_arch OF SubBytes_tb IS
-  COMPONENT SubBytes
+ENTITY inv_SubBytes_tb IS
+END ENTITY inv_SubBytes_tb;
+ARCHITECTURE inv_SubBytes_tb_arch OF inv_SubBytes_tb IS
+  COMPONENT inv_SubBytes
     PORT (
       data_i : IN type_state;
       data_o : OUT type_state
@@ -17,7 +17,7 @@ ARCHITECTURE SubBytes_tb_arch OF SubBytes_tb IS
   SIGNAL data_i_s : type_state;
   SIGNAL data_o_s : type_state;
 BEGIN
-  DUT : SubBytes
+  DUT : inv_SubBytes
   PORT MAP
   (
     data_i => data_i_s,
@@ -30,12 +30,12 @@ BEGIN
     (X"20", X"21", X"22", X"23"),
     (X"30", X"31", X"32", X"33"));
 
-END ARCHITECTURE SubBytes_tb_arch;
+END ARCHITECTURE inv_SubBytes_tb_arch;
 
-CONFIGURATION SubBytes_tb_conf OF SubBytes_tb IS
-  FOR SubBytes_tb_arch
-    FOR DUT : SubBytes
-      USE ENTITY LIB_RTL.SubBytes(SubBytes_arch);
+CONFIGURATION inv_SubBytes_tb_conf OF inv_SubBytes_tb IS
+  FOR inv_SubBytes_tb_arch
+    FOR DUT : inv_SubBytes
+      USE ENTITY LIB_RTL.inv_SubBytes(inv_SubBytes_arch);
     END FOR;
   END FOR;
-END SubBytes_tb_conf;
+END inv_SubBytes_tb_conf;

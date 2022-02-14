@@ -5,11 +5,11 @@ LIBRARY lib_rtl;
 LIBRARY lib_aes;
 USE lib_aes.state_definition_package.ALL;
 
-ENTITY AES_Round_tb IS
-END ENTITY AES_Round_tb;
-ARCHITECTURE AES_Round_tb_arch OF AES_Round_tb IS
+ENTITY inv_AES_Round_tb IS
+END ENTITY inv_AES_Round_tb;
+ARCHITECTURE inv_AES_Round_tb_arch OF inv_AES_Round_tb IS
 
-  COMPONENT AES_Round
+  COMPONENT inv_AES_Round
     PORT (
       clock_i : IN STD_LOGIC;
       currentKey_i : IN type_key;
@@ -20,7 +20,7 @@ ARCHITECTURE AES_Round_tb_arch OF AES_Round_tb IS
       idle_i : IN STD_LOGIC
     );
 
-  END COMPONENT AES_Round;
+  END COMPONENT inv_AES_Round;
 
   SIGNAL clock_s : STD_LOGIC := '0';
   SIGNAL enableInvMixColumns_s, firstRound_s : STD_LOGIC;
@@ -32,7 +32,7 @@ ARCHITECTURE AES_Round_tb_arch OF AES_Round_tb IS
   SIGNAL idle_s : STD_LOGIC := '0';
 BEGIN
 
-  DUT : AES_Round
+  DUT : inv_AES_Round
   PORT MAP(
     clock_i => clock_s,
     currentKey_i => currentKey_s,
@@ -56,12 +56,12 @@ BEGIN
     (x"4f", x"f6", x"8d", x"63"));
   enableInvMixColumns_s <= '1';
   firstRound_s <= '0';
-END ARCHITECTURE AES_Round_tb_arch;
+END ARCHITECTURE inv_AES_Round_tb_arch;
 
-CONFIGURATION AES_Round_tb_conf OF AES_Round_tb IS
-  FOR AES_Round_tb_arch
-    FOR DUT : AES_Round
-      USE ENTITY LIB_RTL.AES_Round(AES_Round_arch);
+CONFIGURATION inv_AES_Round_tb_conf OF inv_AES_Round_tb IS
+  FOR inv_AES_Round_tb_arch
+    FOR DUT : inv_AES_Round
+      USE ENTITY LIB_RTL.inv_AES_Round(inv_AES_Round_arch);
     END FOR;
   END FOR;
-END AES_Round_tb_conf;
+END inv_AES_Round_tb_conf;

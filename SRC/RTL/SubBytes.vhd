@@ -4,14 +4,14 @@ USE IEEE.numeric_std.ALL;
 LIBRARY lib_rtl;
 LIBRARY lib_aes;
 USE lib_aes.state_definition_package.ALL;
-ENTITY SubBytes IS
+ENTITY inv_SubBytes IS
   PORT (
     data_i : IN type_state;
     data_o : OUT type_state
   );
-END SubBytes;
+END inv_SubBytes;
 
-ARCHITECTURE SubBytes_arch OF SubBytes IS
+ARCHITECTURE inv_SubBytes_arch OF inv_SubBytes IS
 
   COMPONENT Sbox_inv
     PORT (
@@ -36,10 +36,10 @@ BEGIN
     END GENERATE;
   END GENERATE;
 
-END SubBytes_arch;
+END inv_SubBytes_arch;
 
-CONFIGURATION SubBytes_conf OF SubBytes IS
-  FOR SubBytes_arch
+CONFIGURATION inv_SubBytes_conf OF inv_SubBytes IS
+  FOR inv_SubBytes_arch
     FOR loopi
       FOR loopj
         FOR ALL : Sbox_inv
@@ -48,4 +48,4 @@ CONFIGURATION SubBytes_conf OF SubBytes IS
       END FOR;
     END FOR;
   END FOR;
-END SubBytes_conf;
+END inv_SubBytes_conf;

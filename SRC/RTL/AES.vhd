@@ -5,7 +5,7 @@ LIBRARY lib_rtl;
 LIBRARY lib_aes;
 USE lib_aes.state_definition_package.ALL;
 
-ENTITY AES IS
+ENTITY AES_inv IS
     PORT (
         start_i : IN STD_LOGIC; -- Permet le démarrage de l'algorithme
         clock_i : IN STD_LOGIC; -- Synchronise les états et les composents 
@@ -15,9 +15,9 @@ ENTITY AES IS
         data_o : OUT bit128 -- Sortie finale
     );
 
-END ENTITY AES;
+END ENTITY AES_inv;
 
-ARCHITECTURE AES_arch OF AES IS
+ARCHITECTURE AES_inv_arch OF AES_inv IS
 
     COMPONENT Counter IS
         PORT (
@@ -47,7 +47,7 @@ ARCHITECTURE AES_arch OF AES IS
         );
     END COMPONENT KeyExpansion_table;
 
-    COMPONENT AES_Round IS
+    COMPONENT inv_AES_Round IS
         PORT (
             clock_i : IN STD_LOGIC;
             currentKey_i : IN type_key; 
@@ -57,7 +57,7 @@ ARCHITECTURE AES_arch OF AES IS
             idle_i : IN STD_LOGIC;
             data_o : OUT type_state
         );
-    END COMPONENT AES_Round;
+    END COMPONENT inv_AES_Round;
 
     COMPONENT MUX IS
         PORT (
@@ -114,7 +114,7 @@ BEGIN
         expansion_key_o => ExpansionKey_s
     );
 
-    AESROUND : AES_Round
+    AESROUND : inv_AES_Round
     PORT MAP(
         clock_i => clock_i,
         currentKey_i => ExpansionKey_s,
@@ -150,4 +150,4 @@ BEGIN
         entree_i => state_s,    --Type State
         sortie_o => data_o      --Bit 128 pour déchiffrer le texte
     );
-END AES_arch;
+END AES_inv_arch;

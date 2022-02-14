@@ -5,47 +5,46 @@ export PROJECTNAME="."
 # TO DO : test $PROJECTNAME
 echo "the project location is : $PROJECTNAME"
 echo "removing libs"
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vdel -lib $PROJECTNAME/LIB/LIB_AES -all
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vdel -lib $PROJECTNAME/LIB/LIB_RTL -all
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vdel -lib $PROJECTNAME/LIB/LIB_BENCH -all
+vdel -lib LIB/lib_aes -all
+vdel -lib LIB/lib_rtl -all
+vdel -lib LIB/lib_bench -all 
 
 echo "creating library "
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vlib $PROJECTNAME/LIB/LIB_AES
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vmap LIB_AES $PROJECTNAME/LIB/LIB_AES
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vlib $PROJECTNAME/LIB/LIB_RTL
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vmap LIB_RTL $PROJECTNAME/LIB/LIB_RTL
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vlib $PROJECTNAME/LIB/LIB_BENCH
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vmap LIB_BENCH $PROJECTNAME/LIB/LIB_BENCH
+vlib $PROJECTNAME/LIB/lib_aes
+vmap lib_aes $PROJECTNAME/LIB/lib_aes
+vlib $PROJECTNAME/LIB/lib_rtl
+vmap lib_rtl $PROJECTNAME/LIB/lib_rtl
+vlib $PROJECTNAME/LIB/lib_bench
+vmap lib_bench $PROJECTNAME/LIB/lib_bench
 
 echo "compile third party library"
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_AES $PROJECTNAME/SRC/PACKAGE/state_definition_package.vhd
+vcom -work lib_aes $PROJECTNAME/SRC/PACKAGE/state_definition_package.vhd
 
 echo "compile vhdl sources"
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/Counter.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/KeyExpansion_table.vhd
-#A compléter
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/Sbox.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/SubBytes.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/ShiftRow.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/MixColumn.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/addRoundKey.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/AES.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/AES_Round.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/AES_FSM.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/MUX.vhd
-
-
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/Sbox.vhd
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/SubBytes.vhd
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/ShiftRow.vhd
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/MixColumn.vhd
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/addRoundKey.vhd
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/KeyExpansion_table.vhd
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/MUX.vhd
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/Counter.vhd
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/AES_Round.vhd
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/AES_FSM.vhd
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/stateToBit128.vhd
+vcom -work lib_rtl $PROJECTNAME/SRC/RTL/AES.vhd
 
 echo "compile vhdl test bench"
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/Counter_tb.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/Sbox_tb.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/SubBytes_tb.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/ShiftRows_tb.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/addRoundKey_tb.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/MixColumn_tb.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/KeyExpansion_table_tb.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/AES_tb.vhd
-/home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/AES_Round_tb.vhd
+
+vcom -work lib_bench $PROJECTNAME/SRC/BENCH/Counter_tb.vhd
+vcom -work lib_bench $PROJECTNAME/SRC/BENCH/Sbox_tb.vhd
+vcom -work lib_bench $PROJECTNAME/SRC/BENCH/SubBytes_tb.vhd
+vcom -work lib_bench $PROJECTNAME/SRC/BENCH/ShiftRows_tb.vhd
+vcom -work lib_bench $PROJECTNAME/SRC/BENCH/addRoundKey_tb.vhd
+vcom -work lib_bench $PROJECTNAME/SRC/BENCH/MixColumn_tb.vhd
+vcom -work lib_bench $PROJECTNAME/SRC/BENCH/KeyExpansion_table_tb.vhd
+vcom -work lib_bench $PROJECTNAME/SRC/BENCH/AES_Round_tb.vhd
+vcom -work lib_bench $PROJECTNAME/SRC/BENCH/AES_tb.vhd
 
 
 
@@ -53,6 +52,6 @@ echo "compilation finished"
 
 echo "start simulation..."
 # ATTENTION un seul VSIM decommenté à la fois!
-# /home/zakaria/intelFPGA/20.1/modelsim_ase/bin/vsim .
+vsim .
 
 

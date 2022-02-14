@@ -5,7 +5,7 @@ LIBRARY lib_rtl;
 LIBRARY lib_aes;
 USE lib_aes.state_definition_package.ALL;
 
-ENTITY AES_Round IS
+ENTITY inv_AES_Round IS
   PORT (
     clock_i : IN STD_LOGIC;
     currentKey_i : IN type_key;
@@ -16,18 +16,18 @@ ENTITY AES_Round IS
     idle_i : IN STD_LOGIC
   );
 
-END ENTITY AES_Round;
+END ENTITY inv_AES_Round;
 
-ARCHITECTURE AES_Round_arch OF AES_Round IS
+ARCHITECTURE inv_AES_Round_arch OF inv_AES_Round IS
 
-  COMPONENT SubBytes
+  COMPONENT inv_SubBytes
     PORT (
       data_i : IN type_state;
       data_o : OUT type_state
     );
   END COMPONENT;
 
-  COMPONENT ShiftRows
+  COMPONENT inv_ShiftRows
     PORT (
       Data_i : IN type_state;
       Data_o : OUT type_state
@@ -40,7 +40,7 @@ ARCHITECTURE AES_Round_arch OF AES_Round IS
       Key_i : IN type_key;
       Data_o : OUT type_state);
   END COMPONENT;
-  COMPONENT MixColumn
+  COMPONENT inv_MixColumn
     PORT (
       data_i : IN type_state;
       data_o : OUT type_state;
@@ -55,11 +55,11 @@ ARCHITECTURE AES_Round_arch OF AES_Round IS
   SIGNAL data_idle_o_s : type_state;
 BEGIN
 
-  SHIFT : ShiftRows PORT MAP(
+  SHIFT : inv_ShiftRows PORT MAP(
     data_i => currentText_i,
     data_o => inter_ShiftRows_SubBytes_s);
 
-  SUB : SubBytes PORT MAP(
+  SUB : inv_SubBytes PORT MAP(
     data_i => inter_ShiftRows_SubBytes_s,
     data_o => inter_SubBytes_AddRoundKey_s);
 
@@ -70,7 +70,7 @@ BEGIN
     Key_i => currentKey_i,
     Data_o => inter_AddRoundKey_MixColumns_s);
 
-  MIX : MixColumn PORT MAP(
+  MIX : inv_MixColumn PORT MAP(
     data_i => inter_AddRoundKey_MixColumns_s,
     data_o => data_o_s,
     enablemc_i => enableInvMixColumns_i);
@@ -87,21 +87,21 @@ BEGIN
       END IF;
     END IF;
   END PROCESS seq;
-END AES_Round_arch;
+END inv_AES_Round_arch;
 
-CONFIGURATION AES_Round_conf OF AES_Round IS
-  FOR AES_Round_arch
+CONFIGURATION inv_AES_Round_conf OF inv_AES_Round IS
+  FOR inv_AES_Round_arch
     FOR ALL : AddRoundKey
       USE ENTITY lib_rtl.AddRoundKey(AddRoundKey_arch);
     END FOR;
-    FOR ALL : ShiftRows
-      USE ENTITY lib_rtl.ShiftRows(ShiftRows_arch);
+    FOR ALL : inv_ShiftRows
+      USE ENTITY lib_rtl.inv_ShiftRows(inv_ShiftRows_arch);
     END FOR;
-    FOR ALL : SubBytes
-      USE CONFIGURATION lib_rtl.SubBytes_conf;
+    FOR ALL : inv_SubBytes
+      USE CONFIGURATION lib_rtl.inv_SubBytes_conf;
     END FOR;
-    FOR ALL : MixColumn
-      USE ENTITY lib_rtl.MixColumn(MixColumn_arch);
+    FOR ALL : inv_MixColumn
+      USE ENTITY lib_rtl.inv_MixColumn(inv_MixColumn_arch);
     END FOR;
   END FOR;
-END AES_Round_conf;
+END inv_AES_Round_conf;

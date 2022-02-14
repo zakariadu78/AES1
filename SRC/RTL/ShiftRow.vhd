@@ -5,13 +5,13 @@ LIBRARY lib_rtl;
 LIBRARY lib_aes;
 USE lib_aes.state_definition_package.ALL;
 
-ENTITY Shiftrows IS
+ENTITY inv_Shiftrows IS
   PORT (
     Data_i : IN type_state;
     Data_o : OUT type_state
   );
 END ENTITY;
-ARCHITECTURE Shiftrows_arch OF Shiftrows IS
+ARCHITECTURE inv_Shiftrows_arch OF inv_Shiftrows IS
 
 BEGIN
   -- Pas de décallage
